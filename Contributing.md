@@ -1,0 +1,65 @@
+The contributing guidelines outlined here are for a future GitHub based workflow. Up-to-date WebKit contribution guidelines are best outlined in our [ReadMe](https://github.com/WebKit/WebKit#readme).
+
+## Checking Out WebKit
+
+Although WebKit can be checked via GitHub's https remote, we recomend using ssh so you are not prompted for your password when pushing code changes.
+
+```
+git clone git@github.com:WebKit/WebKit.git WebKit
+```
+
+Note that this will require adding a [ssh key](https://github.com/settings/keys) to your GitHub profile.
+
+## Setup
+
+### `git-webkit`
+
+WebKit provides a number of scripts in [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) to aid in development. We recomend putting [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) on your `PATH`. In particular, if [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) is integrated into your `PATH`, the [git-webkit](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/git-webkit) script, which provides various programs for interaction with the WebKit repository, can be invoked as `git webkit`.
+
+### `git-webkit setup`
+
+The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/git-webkit) configures your local WebKit checkout for contributing code to the WebKit project. This script will occasionally prompt the user for input. The script does the following:
+
+* Set your name and email address for the WebKit repository
+* Make Objective-C diffs easier to digest
+* Setup a commit message generator
+* Set an editor for commit messages
+* Automatically merge Changelog diffs
+* Store a [GitHub API token](https://github.com/settings/tokens) in your system credential store
+* Create a user owned fork of the WebKit repository
+
+### `git-webkit setup-svn`
+
+As long as WebKit has Subversion as it's source of truth, and a contributor wishes to commit directly from their GitHub checkout, it is nessesariy to configure `git svn` with `git-webkit setup-svn`.
+
+## Contributing Code
+
+https://webkit.org/contributing-code/ outlines how to build and test WebKit along with code style guidlines and testing policies.
+
+Once a bug has been prepared and a code change drafted locally, contributors should run `git-webkit pr` to automatically generate a pull request. That script will do a few things:
+
+* Create a `eng` prefixed pull-request branch, if needed
+* Create a commit with locally modified files, if needed
+* Rebase the pull-request branch against the latest version of it's parent branch
+* Push the pull-request branch to a user's personal fork of the project
+* Create (or update) a pull-request to merge to the parent branch in WebKit
+
+Note that the same process is used to update an already published pull-request.
+
+## Code Review
+
+Before being landed by a [committer](https://github.com/orgs/WebKit/teams/committers), code must be reviewed by a [reviewer](https://github.com/orgs/WebKit/teams/reviewers). After a change is approved (sometimes through an `r+` or `r=me` in pull-request comments), it's the responsiblity of the commit author to be sure that the change will not fail any EWS queues, this is not automatically enforced for most queues to speed up development.
+
+## Landing Changes
+
+_Most landing will be achieved via commit-queue, this outlines the current behavior of `git-webkit land`_
+
+To land a change, run `git-webkit land` from the branch to be landed. Note that only a [committer](https://github.com/orgs/WebKit/teams/committers) has the privledges to commit a change to the WebKit repository. Before changes are landed, the reviewer should be noted in the commit message and changelog. `git-webkit` will automatically modify the commit message, but not the changelog. `git-webkit land` does the following:
+
+* Check to ensure a pull-request is approved and not blocked
+* Insert reviewer names into the commit message
+* Rebase the pull-request against it's parent branch
+* [Canonicalize](https://github.com/WebKit/WebKit/wiki/Source-Control#canonicalization) the commits to be landed
+* Push changes to [svn.webkit.org](https://svn.webkit.org/repository/webkit/)
+* Wait for the GitHub mirror to pick up [svn.webkit.org](https://svn.webkit.org/repository/webkit/) changes
+* Update the pull-request with the landed commit
