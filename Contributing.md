@@ -8,7 +8,7 @@ Although WebKit can be checked via GitHub's https remote, we recomend using ssh 
 git clone git@github.com:WebKit/WebKit.git WebKit
 ```
 
-Note that this will require adding a [ssh key](https://github.com/settings/keys) to your GitHub profile.
+Note that this will require adding a [ssh key](https://github.com/settings/keys) to your GitHub profile. For more information about alternate WebKit remotes, consult [Alternate Rmoetes](/WebKit/WebKit/wiki/Git-Config#Alternate-Remotes)
 
 ## Setup
 
@@ -20,13 +20,13 @@ WebKit provides a number of scripts in [Tools/Scripts](https://github.com/WebKit
 
 The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/git-webkit) configures your local WebKit checkout for contributing code to the WebKit project. This script will occasionally prompt the user for input. The script does the following:
 
-* Set your name and email address for the WebKit repository
-* Make Objective-C diffs easier to digest
+* Set your [name](/WebKit/WebKit/wiki/Git-Config#useremail) and [email address](/WebKit/WebKit/wiki/Git-Config#username) for the WebKit repository
+* [Make Objective-C diffs easier to digest](/WebKit/WebKit/wiki/Git-Config#diff)
 * Setup a commit message generator
-* Set an editor for commit messages
-* Automatically merge Changelog diffs
+* Set an [editor for commit messages](/WebKit/WebKit/wiki/Git-Config#coreeditor)
+* [Automatically merge Changelog diffs](/WebKit/WebKit/wiki/Git-Config#merge)
 * Store a [GitHub API token](https://github.com/settings/tokens) in your system credential store
-* Create a user owned fork of the WebKit repository
+* Create a [user owned fork](/WebKit/WebKit/wiki/Git-Config#Forking) of the WebKit repository
 
 ### `git-webkit setup-svn`
 
