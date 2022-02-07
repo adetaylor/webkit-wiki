@@ -20,7 +20,7 @@ WebKit provides a number of scripts in [Tools/Scripts](https://github.com/WebKit
 
 The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/git-webkit) configures your local WebKit checkout for contributing code to the WebKit project. This script will occasionally prompt the user for input. The script does the following:
 
-* Set your [name](/WebKit/WebKit/wiki/Git-Config#useremail) and [email address](/WebKit/WebKit/wiki/Git-Config#username) for the WebKit repository
+* Set your [name](/WebKit/WebKit/wiki/Git-Config#username) and [email address](/WebKit/WebKit/wiki/Git-Config#useremail) for the WebKit repository
 * [Make Objective-C diffs easier to digest](/WebKit/WebKit/wiki/Git-Config#diff)
 * Setup a commit message generator
 * Set an [editor for commit messages](/WebKit/WebKit/wiki/Git-Config#coreeditor)
