@@ -13,3 +13,4 @@
 ### [Git Configuration](/WebKit/WebKit/wiki/Git-Config)
 > [Remotes](/WebKit/WebKit/wiki/Git-Config#Remotes) <br>
 > [Configuration Options](/WebKit/WebKit/wiki/Git-Config#Configuration-Options) <br>
+> [WebKit Options](/WebKit/WebKit/wiki/Git-Config#WebKit-Options) <br>

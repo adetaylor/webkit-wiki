@@ -80,7 +80,7 @@ Note that the author and committer listed in a `git` commit can easily be spoofe
 
 ### pull.rebase
 
-When you are updating a branch from a remote, a local branch may have commits that do not exist on the remote. This usually happens when a contributor is committing local changes. `git` supports "rebasing" and "merging" in these cases.
+When a contributor is updating a branch from a remote, a local branch may have commits that do not exist on the remote. This usually happens when a contributor is committing local changes. `git` supports "rebasing" and "merging" in these cases.
 
 "rebasing" means updating the local branch reference to match the remote and then re-applying local commits on top of the tip of the updated branch. For changes which are small relative to the size of the repository, this is the cleanest method of applying local changes to an updated branch.
 
@@ -120,4 +120,26 @@ When creating or editing commit messages, `git` will invoke an external editor. 
 
 ### svn-remote
 
-This configuration options pairs a local branch in your checkout to a subversion branch on a specified remote. This configuration is required to use `git svn` commands. Note that `git-webkit find` allows a pure `git` checkout to reason about Subversion revisions without specifying an `svn-remote` for the branch containing the revision in question.
+This configuration options pairs a local branch in a contributor's checkout to a subversion branch on a specified remote. This configuration is required to use `git svn` commands. Note that `git-webkit find` allows a pure `git` checkout to reason about Subversion revisions without specifying an `svn-remote` for the branch containing the revision in question.
+
+## WebKit Options
+
+[`git-webkit`] respects a few options that are specific to the `webkitscmpy` library. [`git-webkit setup`](/WebKit/WebKit/wiki/Contributing#setup) does automatically configure some of these, [`metadata/project_config`](/WebKit/WebKit/blob/main/metadata/project_config) also contains a few default values for the project.
+
+### webkitscmpy.pull-request
+
+When responding to review feedback, contributors can either append commits to their original changes or force push and overwrite existing commits. `git-webkit pull-request` supports both workflows, and the `webkitscmpy.pull-request` option can be set to either `overwrite` or `append` to control which workflow `git-webkit` assumes a contributor is using.
+
+### webkitscmpy.history
+
+Prompts:
+```
+Would you like to create new branches to retain history when you overwrite
+a pull request branch?
+    1) [when-user-owned]
+    2) disabled
+    3) always
+    4) never
+```
+
+Managing pull requests often involves force pushing. This may result in historical changes being lost as a contributor responds to feedback. `git-webkit` supports saving old branches for the duration of a pull request. Some projects may wish to aggresively disable this option with `never` because contributors do not own user-specific forks. `when-user-owned` is generally considered the default option, which will create history branches only when a contributor owns a remote fork and is using the `overwrite` workflow.
