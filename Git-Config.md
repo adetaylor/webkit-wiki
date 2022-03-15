@@ -1,4 +1,4 @@
-The WebKit project outlines a simplified recomended setup [here](/WebKit/WebKit/wiki/Contributing). This section outlines in greater detail other configuration options certain contributors may prefer.
+The WebKit project outlines a simplified recommended setup [here](/WebKit/WebKit/wiki/Contributing). This section outlines in greater detail other configuration options certain contributors may prefer.
 
 ## Remotes
 
@@ -12,7 +12,7 @@ The WebKit project currently has 5 different remotes:
 - [git.webkit.org (http)](https://git.webkit.org/?p=WebKit.git;a=summary)
 - [github.com/WebKit/WebKit-http](https://github.com/WebKit/WebKit-http)
 
-The first remote, [github.com/WebKit/WebKit](https://github.com/WebKit/WebKit), is an actively maintained `git` mirror of [svn.webkit.org](https://svn.webkit.org/repository/webkit/) that will soon become the canonical home of the WebKit project. We strongly recomend that all contributors use this remote for routine development.
+The first remote, [github.com/WebKit/WebKit](https://github.com/WebKit/WebKit), is an actively maintained `git` mirror of [svn.webkit.org](https://svn.webkit.org/repository/webkit/) that will soon become the canonical home of the WebKit project. We strongly recommend that all contributors use this remote for routine development.
 
 The second remote, [svn.webkit.org](https://svn.webkit.org/repository/webkit/), is the current canonical remote for the WebKit project. If a contributor is contributing to the WebKit project on a release branch, this is the remote they should be using. Note that this remote is Subversion, not git.
 
@@ -50,7 +50,7 @@ to their `.git/config` and run `git checkout remotes/<username>/eng/some-branch`
 
 ## Configuration Options
 
-[`git-webkit setup`](/WebKit/WebKit/wiki/Contributing#setup) automatically sets or prompts the contributor to define a number of `git` configuration options. Most contributors  should use the defaults recomended by [`git-webkit setup`](/WebKit/WebKit/wiki/Contributing#setup). This section defines, in detail, what an option does and why the WebKit project recommends a certain setting.
+[`git-webkit setup`](/WebKit/WebKit/wiki/Contributing#setup) automatically sets or prompts the contributor to define a number of `git` configuration options. Most contributors  should use the defaults recommended by [`git-webkit setup`](/WebKit/WebKit/wiki/Contributing#setup). This section defines, in detail, what an option does and why the WebKit project recommends a certain setting.
 
 ### user.email
 
@@ -84,9 +84,9 @@ When a contributor is updating a branch from a remote, a local branch may have c
 
 "rebasing" means updating the local branch reference to match the remote and then re-applying local commits on top of the tip of the updated branch. For changes which are small relative to the size of the repository, this is the cleanest method of applying local changes to an updated branch.
 
-"merging" means creating a new "merge commit" which has both the most recent commit from the newly updated remote and the most recent local commit as it's parents. This technique is useful if the number and magnitude of local commits are large relative to the size of the repository. Note that many project explicitly ban pushing merge commits because they can make bisection and reasoning about continuous integration difficult.
+"merging" means creating a new "merge commit" which has both the most recent commit from the newly updated remote and the most recent local commit as its parents. This technique is useful if the number and magnitude of local commits are large relative to the size of the repository. Note that many project explicitly ban pushing merge commits because they can make bisection and reasoning about continuous integration difficult.
 
-The `pull.rebase` configuration will automatically use a `rebase` workflow when running `git pull`. The WebKit project strongly recomends a `rebase` workflow and does not allow merge commits on `main` and other protected branches.
+The `pull.rebase` configuration will automatically use a `rebase` workflow when running `git pull`. The WebKit project strongly recommends a `rebase` workflow and does not allow merge commits on `main` and other protected branches.
 
 ### color.status/color.diff/color.branch
 
@@ -142,4 +142,4 @@ a pull request branch?
     4) never
 ```
 
-Managing pull requests often involves force pushing. This may result in historical changes being lost as a contributor responds to feedback. `git-webkit` supports saving old branches for the duration of a pull request. Some projects may wish to aggresively disable this option with `never` because contributors do not own user-specific forks. `when-user-owned` is generally considered the default option, which will create history branches only when a contributor owns a remote fork and is using the `overwrite` workflow.
+Managing pull requests often involves force pushing. This may result in historical changes being lost as a contributor responds to feedback. `git-webkit` supports saving old branches for the duration of a pull request. Some projects may wish to aggressively disable this option with `never` because contributors do not own user-specific forks. `when-user-owned` is generally considered the default option, which will create history branches only when a contributor owns a remote fork and is using the `overwrite` workflow.
