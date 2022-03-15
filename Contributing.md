@@ -2,19 +2,19 @@ The contributing guidelines outlined here are for a future GitHub based workflow
 
 ## Checking Out WebKit
 
-Although WebKit can be checked via GitHub's https remote, we recomend using ssh so you are not prompted for your password when pushing code changes.
+Although WebKit can be checked via GitHub's https remote, we recommend using ssh so you are not prompted for your password when pushing code changes.
 
 ```
 git clone git@github.com:WebKit/WebKit.git WebKit
 ```
 
-Note that this will require adding a [ssh key](https://github.com/settings/keys) to your GitHub profile. For more information about alternate WebKit remotes, consult [Alternate Rmoetes](/WebKit/WebKit/wiki/Git-Config#Alternate-Remotes)
+Note that this will require adding a [ssh key](https://github.com/settings/keys) to your GitHub profile. For more information about alternate WebKit remotes, consult [Alternate Remotes](/WebKit/WebKit/wiki/Git-Config#Alternate-Remotes)
 
 ## Setup
 
 ### `git-webkit`
 
-WebKit provides a number of scripts in [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) to aid in development. We recomend putting [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) on your `PATH`. In particular, if [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) is integrated into your `PATH`, the [git-webkit](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/git-webkit) script, which provides various programs for interaction with the WebKit repository, can be invoked as `git webkit`.
+WebKit provides a number of scripts in [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) to aid in development. We recommend putting [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) on your `PATH`. In particular, if [Tools/Scripts](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts) is integrated into your `PATH`, the [git-webkit](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/git-webkit) script, which provides various programs for interaction with the WebKit repository, can be invoked as `git webkit`.
 
 ### `git-webkit setup`
 
@@ -34,7 +34,7 @@ As long as WebKit has Subversion as it's source of truth, and a contributor wish
 
 ## Contributing Code
 
-https://webkit.org/contributing-code/ outlines how to build and test WebKit along with code style guidlines and testing policies.
+https://webkit.org/contributing-code/ outlines how to build and test WebKit along with code style guidelines and testing policies.
 
 Once a bug has been prepared and a code change drafted locally, contributors should run `git-webkit pr` to automatically generate a pull request. That script will do a few things:
 
@@ -48,13 +48,13 @@ Note that the same process is used to update an already published pull-request.
 
 ## Code Review
 
-Before being landed by a [committer](https://github.com/orgs/WebKit/teams/committers), code must be reviewed by a [reviewer](https://github.com/orgs/WebKit/teams/reviewers). After a change is approved (sometimes through an `r+` or `r=me` in pull-request comments), it's the responsiblity of the commit author to be sure that the change will not fail any EWS queues, this is not automatically enforced for most queues to speed up development.
+Before being landed by a [committer](https://github.com/orgs/WebKit/teams/committers), code must be reviewed by a [reviewer](https://github.com/orgs/WebKit/teams/reviewers). After a change is approved (sometimes through an `r+` or `r=me` in pull-request comments), it's the responsibility of the commit author to be sure that the change will not fail any EWS queues, this is not automatically enforced for most queues to speed up development.
 
 ## Landing Changes
 
 _Most landing will be achieved via commit-queue, this outlines the current behavior of `git-webkit land`_
 
-To land a change, run `git-webkit land` from the branch to be landed. Note that only a [committer](https://github.com/orgs/WebKit/teams/committers) has the privledges to commit a change to the WebKit repository. Before changes are landed, the reviewer should be noted in the commit message and changelog. `git-webkit` will automatically modify the commit message, but not the changelog. `git-webkit land` does the following:
+To land a change, run `git-webkit land` from the branch to be landed. Note that only a [committer](https://github.com/orgs/WebKit/teams/committers) has the privileges to commit a change to the WebKit repository. Before changes are landed, the reviewer should be noted in the commit message and changelog. `git-webkit` will automatically modify the commit message, but not the changelog. `git-webkit land` does the following:
 
 * Check to ensure a pull-request is approved and not blocked
 * Insert reviewer names into the commit message
