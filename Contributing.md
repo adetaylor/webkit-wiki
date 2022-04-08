@@ -2,13 +2,17 @@ The contributing guidelines outlined here are for a future GitHub based workflow
 
 ## Checking Out WebKit
 
-Although WebKit can be checked via GitHub's https remote, we recommend using ssh so you are not prompted for your password when pushing code changes.
+WebKit can be checked out via GitHub's https remote with:
+```
+git clone https://github.com/WebKit/WebKit.git WebKit
+```
 
+Or, if a [ssh key](https://github.com/settings/keys) has already been added to your GitHub profile:
 ```
 git clone git@github.com:WebKit/WebKit.git WebKit
 ```
 
-Note that this will require adding a [ssh key](https://github.com/settings/keys) to your GitHub profile. For more information about alternate WebKit remotes, consult [Alternate Remotes](/WebKit/WebKit/wiki/Git-Config#Alternate-Remotes)
+For more information about alternate WebKit remotes, consult [Alternate Remotes](/WebKit/WebKit/wiki/Git-Config#Alternate-Remotes)
 
 ## Setup
 
@@ -26,6 +30,7 @@ The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/ma
 * Set an [editor for commit messages](/WebKit/WebKit/wiki/Git-Config#coreeditor)
 * [Automatically merge Changelog diffs](/WebKit/WebKit/wiki/Git-Config#merge)
 * Store a [GitHub API token](https://github.com/settings/tokens) in your system credential store
+* Configure `git` to use the [GitHub API token](https://github.com/settings/tokens) when prompted for credentials, if using the HTTPS remote
 * Create a [user owned fork](/WebKit/WebKit/wiki/Git-Config#Forking) of the WebKit repository
 
 ### `git-webkit setup-svn`
