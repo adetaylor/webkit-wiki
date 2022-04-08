@@ -33,9 +33,9 @@ The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/ma
 * Configure `git` to use the [GitHub API token](https://github.com/settings/tokens) when prompted for credentials, if using the HTTPS remote
 * Create a [user owned fork](/WebKit/WebKit/wiki/Git-Config#Forking) of the WebKit repository
 
-### `git-webkit setup-svn`
+### `git-webkit setup-git-svn`
 
-As long as WebKit has Subversion as it's source of truth, and a contributor wishes to commit directly from their GitHub checkout, it is nessesariy to configure `git svn` with `git-webkit setup-svn`.
+As long as WebKit has Subversion as it's source of truth, and a contributor wishes to commit directly from their GitHub checkout, it is nessesariy to configure `git svn` with `git-webkit setup-git-svn`.
 
 ## Contributing Code
 
