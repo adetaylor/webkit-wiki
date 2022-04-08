@@ -52,7 +52,17 @@ Before being landed by a [committer](https://github.com/orgs/WebKit/teams/commit
 
 ## Landing Changes
 
-_Most landing will be achieved via commit-queue, this outlines the current behavior of `git-webkit land`_
+### Merge-Queue
+
+To land a pull request, add the [`merge-queue`](https://github.com/WebKit/WebKit/labels?q=merge-queue) or [`unsafe-merge-queue`](https://github.com/WebKit/WebKit/labels?q=unfsafe-merge-queue) label to your pull request. These labels will put your pull request into the [Merge-Queue](https://ews-build.webkit.org/#/builders/74) and [Unsafe-Merge-Queue](https://ews-build.webkit.org/#/builders/75), respectively, which will commit your pull request to the WebKit repository
+
+[Unsafe-Merge-Queue](https://ews-build.webkit.org/#/builders/75) inserts reviewer information into a commit's message and modified change logs. We then check to ensure that a pull request has been reviewed by checking the commit message before landing the change. [Unsafe-Merge-Queue](https://ews-build.webkit.org/#/builders/75) _does not_ validate that a pull request builds.
+
+Along with the actions performed by [Unsafe-Merge-Queue](https://ews-build.webkit.org/#/builders/75), [Merge-Queue](https://ews-build.webkit.org/#/builders/74) will validate that a pull request builds and run layout tests before landing the change.
+
+### `git-webkit land`
+
+_Landing should be achieved via merge-queue, this outlines the current behavior of `git-webkit land`_
 
 To land a change, run `git-webkit land` from the branch to be landed. Note that only a [committer](https://github.com/orgs/WebKit/teams/committers) has the privileges to commit a change to the WebKit repository. Before changes are landed, the reviewer should be noted in the commit message and changelog. `git-webkit` will automatically modify the commit message, but not the changelog. `git-webkit land` does the following:
 
