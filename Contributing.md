@@ -49,7 +49,7 @@ Once a bug has been prepared and a code change drafted locally, contributors sho
 * Push the pull-request branch to a user's personal fork of the project
 * Create (or update) a pull-request to merge to the parent branch in WebKit
 
-Note that the same process is used to update an already published pull-request.
+Note that the same process is used to update an already published pull-request. For a detailed breakdown on the expected format of WebKit pull requests, see [Pull Requests](/WebKit/WebKit/wiki/Pull-Requests).
 
 ## Code Review
 
