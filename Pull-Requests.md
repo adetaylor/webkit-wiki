@@ -8,7 +8,7 @@ The first step of most pull requests is creating a [bug](https://bugs.webkit.org
 
 Pull request branches are owned by their author, which is why `git-webkit setup` [creates a personal fork of WebKit](/WebKit/WebKit/wiki/Contributing#setup). This means that the WebKit project cannot enforce branching idioms, although there are some suggestions the WebKit team has so that other contributors can more easily access proposed changes. `Tools/Scripts/git-webkit pr` derives it's `eng` prefixed branch from the bug title of the bug associated with a pull request.
 
-We suggest that pull request branch names are prefixed by `eng/` or `dev/` so that contributors are clear which branches contain production code when they add other user's forks as remotes. Notably, [EWS](https://ews-build.webkit.org) is unable to apply changes which come from the branch they are targeting (ie, [EWS](https://ews-build.webkit.org) cannot apply a change form `Contributor/WebKit:main` onto `WebKit/WebKit:main`), so in order to be reviewed, changes must come from a different branch.
+We suggest that pull request branch names are prefixed by `eng/` or `dev/` so that contributors are clear which branches contain production code when they add other user's forks as remotes. Notably, [EWS](https://ews-build.webkit.org) is unable to apply changes which come from the branch they are targeting (ie, [EWS](https://ews-build.webkit.org) cannot apply a change from `Contributor/WebKit:main` onto `WebKit/WebKit:main`), so in order to be reviewed, changes must come from a different branch.
 
 ## Commit Messages
 
