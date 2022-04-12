@@ -17,7 +17,7 @@ The WebKit project heavily relies on commit messages to defend project performan
 * Bug title
 * Bug url
 * Reviewer (or explicit reason why a change is unreviewed)
-* High level explination (optional)
+* High level explanation (optional)
 * Files changes, what was changed, and why
 
 `git-webkit setup` [configures `.git/prepare-commit-msg`](/WebKit/WebKit/wiki/Contributing#setup) such that your commit message template is formatted to the standards of the WebKit project.
