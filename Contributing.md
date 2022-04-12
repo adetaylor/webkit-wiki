@@ -43,7 +43,7 @@ https://webkit.org/contributing-code/ outlines how to build and test WebKit alon
 
 Once a bug has been prepared and a code change drafted locally, contributors should run `git-webkit pr` to automatically generate a pull request. That script will do a few things:
 
-* Create a `eng` prefixed pull-request branch, if needed
+* Create a `eng/` prefixed pull-request branch, if needed (e.g. `eng/constants-buffer` branch)
 * Create a commit with locally modified files, if needed
 * Rebase the pull-request branch against the latest version of it's parent branch
 * Push the pull-request branch to a user's personal fork of the project
