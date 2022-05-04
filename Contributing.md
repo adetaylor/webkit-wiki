@@ -35,7 +35,7 @@ The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/ma
 
 ### `git-webkit setup-git-svn`
 
-As long as WebKit has Subversion as it's source of truth, and a contributor wishes to commit directly from their GitHub checkout, it is nessesariy to configure `git svn` with `git-webkit setup-git-svn`.
+As long as WebKit has Subversion as its source of truth, and a contributor wishes to commit directly from their GitHub checkout, it is nessesariy to configure `git svn` with `git-webkit setup-git-svn`.
 
 ## Contributing Code
 
@@ -45,7 +45,7 @@ Once a bug has been prepared and a code change drafted locally, contributors sho
 
 * Create a `eng/` prefixed pull-request branch, if needed (e.g. `eng/constants-buffer` branch)
 * Create a commit with locally modified files, if needed
-* Rebase the pull-request branch against the latest version of it's parent branch
+* Rebase the pull-request branch against the latest version of its parent branch
 * Push the pull-request branch to a user's personal fork of the project
 * Create (or update) a pull-request to merge to the parent branch in WebKit
 
@@ -73,7 +73,7 @@ To land a change, run `git-webkit land` from the branch to be landed. Note that 
 
 * Check to ensure a pull-request is approved and not blocked
 * Insert reviewer names into the commit message
-* Rebase the pull-request against it's parent branch
+* Rebase the pull-request against its parent branch
 * [Canonicalize](https://github.com/WebKit/WebKit/wiki/Source-Control#canonicalization) the commits to be landed
 * Push changes to [svn.webkit.org](https://svn.webkit.org/repository/webkit/)
 * Wait for the GitHub mirror to pick up [svn.webkit.org](https://svn.webkit.org/repository/webkit/) changes
