@@ -28,7 +28,6 @@ The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/ma
 * [Make Objective-C diffs easier to digest](/WebKit/WebKit/wiki/Git-Config#diff)
 * Setup a commit message generator
 * Set an [editor for commit messages](/WebKit/WebKit/wiki/Git-Config#coreeditor)
-* [Automatically merge Changelog diffs](/WebKit/WebKit/wiki/Git-Config#merge)
 * Store a [GitHub API token](https://github.com/settings/tokens) in your system credential store
 * Configure `git` to use the [GitHub API token](https://github.com/settings/tokens) when prompted for credentials, if using the HTTPS remote
 * Create a [user owned fork](/WebKit/WebKit/wiki/Git-Config#Forking) of the WebKit repository
@@ -69,7 +68,7 @@ Along with the actions performed by [Unsafe-Merge-Queue](https://ews-build.webki
 
 _Landing should be achieved via merge-queue, this outlines the current behavior of `git-webkit land`_
 
-To land a change, run `git-webkit land` from the branch to be landed. Note that only a [committer](https://github.com/orgs/WebKit/teams/committers) has the privileges to commit a change to the WebKit repository. Before changes are landed, the reviewer should be noted in the commit message and changelog. `git-webkit` will automatically modify the commit message, but not the changelog. `git-webkit land` does the following:
+To land a change, run `git-webkit land` from the branch to be landed. Note that only a [committer](https://github.com/orgs/WebKit/teams/committers) has the privileges to commit a change to the WebKit repository. `git-webkit land` does the following:
 
 * Check to ensure a pull-request is approved and not blocked
 * Insert reviewer names into the commit message
