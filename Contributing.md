@@ -52,6 +52,10 @@ Note that the same process is used to update an already published pull-request. 
 
 ## Code Review
 
+### Updating a PR
+
+Make sure you're on the right branch. Make the necessary changes in your source tree. When you're ready, run `git-webkit pr` again to update the PR.
+
 Before being landed by a [committer](https://github.com/orgs/WebKit/teams/committers), code must be reviewed by a [reviewer](https://github.com/orgs/WebKit/teams/reviewers). After a change is approved (sometimes through an `r+` or `r=me` in pull-request comments), it's the responsibility of the commit author to be sure that the change will not fail any EWS queues, this is not automatically enforced for most queues to speed up development.
 
 ## Landing Changes
