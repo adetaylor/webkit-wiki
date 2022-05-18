@@ -34,7 +34,7 @@ The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/ma
 
 ### `git-webkit setup-git-svn`
 
-As long as WebKit has Subversion as its source of truth, and a contributor wishes to commit directly from their GitHub checkout, it is nessesariy to configure `git svn` with `git-webkit setup-git-svn`.
+As long as WebKit has Subversion as its source of truth, and a contributor wishes to commit directly from their GitHub checkout, it is necessary to configure `git svn` with `git-webkit setup-git-svn`.
 
 ## Contributing Code
 
