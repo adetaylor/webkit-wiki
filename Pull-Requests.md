@@ -45,7 +45,8 @@ Since direct commit access is limited only to repository administers, this will 
 
 3. Your commit message **MUST** contain the term '**Unreviewed**' in order for your pull-request to be committed successfully. It is generally recommended that you use the term 'Unreviewed test gardening.' in place of 'reviewed by nobody. (OOPS)' for any commit that is setting any kind of test expectations.
 
-An example template for your commit message looks like: 
+An example template for your commit message looks like:
+ 
 <img width="382" alt="Screen Shot 2022-05-19 at 4 49 23 PM" src="https://user-images.githubusercontent.com/57686024/169422157-1d9444ec-a69f-49ef-9172-81a961161887.png">
 
 4.Once your expectations and commit message have been added, you can then submit your pull-request by running `Tools/Scripts/git-webkit pr`. from there your pull-request will be created, and submitted to [WebKit Pull Requests](https://github.com/WebKit/WebKit/pulls). A link directly to your pull-request will be in your terminal output.
