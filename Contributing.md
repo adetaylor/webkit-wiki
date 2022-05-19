@@ -89,7 +89,7 @@ Since direct commit access is limited only to repository administers, this will 
 
 2. Mark your expectations/ make your changes, followed by `git add .` and `git commit`  Changelogs are no longer needed for this, but you will still need to add a commit message.
 
-3. Your commit message **MUST** contain the term '**Unreviewed**' in order for your pull-request to be committed successfully. It is generally recommended that you use the term 'Unreviewed test gardening.' in place of 'reviewed by nobody. (OOPS)' for any commit that is setting any kind of test expectations.
+3. Your commit message **MUST** contain the term '**Unreviewed**' in order for your pull-request to be committed successfully. It is generally recommended that you use the term `Unreviewed test gardening.` in place of `reviewed by nobody. (OOPS)` for any commit that is setting any kind of test expectations.
 
 An example template for your commit message looks like:
  
