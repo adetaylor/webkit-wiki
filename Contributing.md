@@ -94,6 +94,7 @@ Since direct commit access is limited only to repository administers, this will 
 An example template for your commit message looks like:
  
 <img width="382" alt="Screen Shot 2022-05-19 at 4 49 23 PM" src="https://user-images.githubusercontent.com/57686024/169422157-1d9444ec-a69f-49ef-9172-81a961161887.png">
+
 4. Once your expectations and commit message have been added, you can then submit your pull-request by running `Tools/Scripts/git-webkit pr`. From there your pull-request will be created, and submitted to [WebKit Pull Requests](https://github.com/WebKit/WebKit/pulls). A link directly to your pull-request will be in your terminal output.
 
 5. Go to your pull-request with the provided link. Then on the right side of the page under the `labels` tab you will add `unsafe-merge-queue` just like the example below:
