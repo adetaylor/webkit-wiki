@@ -13,7 +13,8 @@
 > [Branching](/WebKit/WebKit/wiki/Pull-Requests#branching) <br>
 > [Commit Messages](/WebKit/WebKit/wiki/Pull-Requests#commit-messages) <br>
 > [Reviewing](/WebKit/WebKit/wiki/Pull-Requests#reviewing) <br>
-> [Landing](/WebKit/WebKit/wiki/Pull-Requests#landing)
+> [Landing](/WebKit/WebKit/wiki/Pull-Requests#landing) <br>
+### [Merging](/WebKit/WebKit/wiki/Merging)
 ### [Source Control](/WebKit/WebKit/wiki/Source-Control)
 > [Commit Representation](/WebKit/WebKit/wiki/Source-Control#branch-management) <br>
 > [Identifiers](/WebKit/WebKit/wiki/Source-Control#identifiers) <br>
