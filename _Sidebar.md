@@ -16,9 +16,9 @@
 > [Landing](/WebKit/WebKit/wiki/Pull-Requests#landing) <br>
 ### [Merging](/WebKit/WebKit/wiki/Merging)
 > [Test Gardening](/WebKit/WebKit/wiki/Merging#test-gardening) <br>
-> [Test Gardening](/WebKit/WebKit/wiki/Merging#merge-queue) <br>
-> [Test Gardening](/WebKit/WebKit/wiki/Merging#unsafe-merge-queue) <br>
-> [Test Gardening](/WebKit/WebKit/wiki/Merging#Editing-existing-pull-requests) <br>
+> [Merge-Queue](/WebKit/WebKit/wiki/Merging#merge-queue) <br>
+> [Unsafe-Merge-Queue](/WebKit/WebKit/wiki/Merging#unsafe-merge-queue) <br>
+> [Editing Existing PRs](/WebKit/WebKit/wiki/Merging#Editing-existing-pull-requests) <br>
 ### [Source Control](/WebKit/WebKit/wiki/Source-Control)
 > [Commit Representation](/WebKit/WebKit/wiki/Source-Control#branch-management) <br>
 > [Identifiers](/WebKit/WebKit/wiki/Source-Control#identifiers) <br>
