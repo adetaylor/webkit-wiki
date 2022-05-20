@@ -18,7 +18,7 @@ An example template for your commit message looks like:
 5. Go to your pull-request with the provided link. Then on the right side of the page under the `labels` tab you will add `unsafe-merge-queue` just like the example below:
 <img width="307" alt="Screen Shot 2022-05-19 at 4 38 14 PM" src="https://user-images.githubusercontent.com/57686024/169421389-38e57a73-2ba1-4a0e-baa5-4b610e41d117.png">
 
-6. After adding the `unsafe-merge-queue` label, your pull-request will attempt to be committed. This should take 1-3 minutes. If there is an issue with the pull-request then the commit may fail with an error.
+6. After adding the `unsafe-merge-queue` label, your pull-request will attempt to be committed. This should take 1-3 minutes, and should commit without issue given that you followed the steps above. If there is an issue with your pull-request then the commit will fail with an error.
 
 ## Merge-Queue
 information to be published at a future date. 
