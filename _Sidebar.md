@@ -15,6 +15,7 @@
 > [Reviewing](/WebKit/WebKit/wiki/Pull-Requests#reviewing) <br>
 > [Landing](/WebKit/WebKit/wiki/Pull-Requests#landing) <br>
 ### [Merging](/WebKit/WebKit/wiki/Merging)
+> [Test Gardening](/WebKit/WebKit/wiki/Merging#test-gardening) <br>
 ### [Source Control](/WebKit/WebKit/wiki/Source-Control)
 > [Commit Representation](/WebKit/WebKit/wiki/Source-Control#branch-management) <br>
 > [Identifiers](/WebKit/WebKit/wiki/Source-Control#identifiers) <br>
