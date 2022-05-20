@@ -26,6 +26,6 @@ information to be published at a future date.
 ## Unsafe-Merge-Queue
 information to be published at a future date. 
 
-## Tips on editing an existing pull-request
+## Editing existing pull-requests
 information to be published at a future date. 
 
