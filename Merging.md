@@ -1,3 +1,5 @@
+This page explains the proper way to set test expectations, as well as highlights the differences between `merge-queue` and `unsafe-merge-queue`. There will also be a section that gives tips on what to do when you need to edit an existing pull-request, and how to cleanly re-submit that.  
+
 ## Test Gardening
 Since direct commit access is limited only to repository administers, this will change the prior workflow of Test Gardening/Setting test expectations. As such the new process is outlined as follows: 
 
