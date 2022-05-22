@@ -1,4 +1,4 @@
-As WebKit moves away form Subversion to Git, contributors will need to migrate their local checkouts and workflows to GitHub. To determine which migration workflow you need, run the following command in your WebKit repository:
+As WebKit moves away from Subversion to Git, contributors will need to migrate their local checkouts and workflows to GitHub. To determine which migration workflow you need, run the following command in your WebKit repository:
 
 ```
 git remote -v
