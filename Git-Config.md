@@ -26,13 +26,13 @@ Since `git` is a decentralized version control system, a local copy can work wit
 
 ```
 [remote "origin"]
-	url = git@github.com:WebKit/WebKit.git
+	url = https://github.com/WebKit/WebKit.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [remote "<username>"]
-	url = git@github.com:<username>/WebKit.git
+	url = https://github.com/<username>/WebKit.git
 	fetch = +refs/heads/*:refs/remotes/<username>/*
 [remote "fork"]
-	url = git@github.com:<username>/WebKit.git
+	url = https://github.com/<username>/WebKit.git
 	fetch = +refs/heads/*:refs/remotes/fork/*
 ```
 
@@ -42,7 +42,7 @@ Now, if a contributor runs `git push fork eng/some-branch`, `eng/some-branch` wi
 
 ```
 [remote "<username>"]
-	url = git@github.com:<username>/WebKit.git
+	url = https://github.com/<username>/WebKit.git
 	fetch = +refs/heads/*:refs/remotes/<username>/*
 ```
 
