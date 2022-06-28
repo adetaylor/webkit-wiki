@@ -1,7 +1,8 @@
 ### [Migration](/WebKit/WebKit/wiki/Migration)
 > [Subversion](/WebKit/WebKit/wiki/Migration#subversion) <br>
 > [Obsolete Mirror](/WebKit/WebKit/wiki/Migration#obsolete-mirror) <br>
-> [`webkit-patch`](/WebKit/WebKit/wiki/Migration#webkit-patch)
+> [`webkit-patch`](/WebKit/WebKit/wiki/Migration#webkit-patch) <br>
+> [`webkit-patch` Reverse Look-up](/WebKit/WebKit/wiki/Migration#webkit-patch-reverse-look-up)
 ### [Contributing](/WebKit/WebKit/wiki/Contributing)
 > [Checking Out WebKit](/WebKit/WebKit/wiki/Contributing#checking-out-WebKit) <br>
 > [Setup](/WebKit/WebKit/wiki/Contributing#setup) <br>

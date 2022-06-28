@@ -44,7 +44,7 @@ After your clone completes, [set up your checkout](/WebKit/WebKit/wiki/Contribut
 
 See [below](/WebKit/WebKit/wiki/Migration#webkit-patch) for how to deal with patches uploaded to bugzilla.
 
-## webkit-patch
+## `webkit-patch`
 
 While `Tools/Scripts/webkit-patch` is being replaced by `Tools/Scripts/git-webkit` for developement workflows, `webkit-patch` does continue to work on GitHub based checkouts. In particular:
 ```
@@ -55,3 +55,19 @@ will apply the patch uploaded to [bug 238981](https://bugs.webkit.org/show_bug.c
 Tools/Scripts/webkit-patch upload
 ```
 will upload local changes to the bugzilla bug mentioned in modified `ChangeLog` files, even if those local changes are committed to a pull request branch.
+
+## `webkit-patch` Reverse Look-up
+
+The table bellow includes a number of common `webkit-patch` commands and their `git-webkit` equivalences.
+
+| `webkit-patch` | `git-webkit` | Description |
+| --- | --- | --- |
+| `webkit-patch apply-attachment` | `git-webkit checkout pr-#` | Get another contributor's unlanded change |
+| `webkit-patch clean` | `git-webkit clean` | Discard uncommitted local changes |
+| `webkit-patch create-revert <revisions>` | `git-webkit revert --pr <hash/identifier>` | Upload a proposal to revert a landed change |
+| `webkit-patch help -a` | `git-webkit --help` | Print program help message |
+| `webkit-patch land` | `git-webkit land` | Land a local change via Commit/Merge Queue |
+| `webkit-patch land-unsafe` | `git-webkit land --unsafe` | Land a local change manually/via Unsafe Merge Queue |
+| `webkit-patch prepare-revert <revisions>` | `git-webkit revert <hash/identifier>` | Revert a landed change locally |
+| `webkit-patch setup-git-clone` | `git-webkit setup` | Configure a local checkout for development |
+| `webkit-patch upload` | `git-webkit pr` | Upload a change for review |
