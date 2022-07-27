@@ -32,10 +32,6 @@ The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/ma
 * Configure `git` to use the [GitHub API token](https://github.com/settings/tokens) when prompted for credentials, if using the HTTPS remote
 * Create a [user owned fork](/WebKit/WebKit/wiki/Git-Config#Forking) of the WebKit repository
 
-### `git-webkit setup-git-svn`
-
-As long as WebKit has Subversion as its source of truth, and a contributor wishes to commit directly from their GitHub checkout, it is necessary to configure `git svn` with `git-webkit setup-git-svn`.
-
 ## Contributing Code
 
 https://webkit.org/contributing-code/ outlines how to build and test WebKit along with code style guidelines and testing policies.
@@ -78,6 +74,4 @@ To land a change, run `git-webkit land` from the branch to be landed. Note that 
 * Insert reviewer names into the commit message
 * Rebase the pull-request against its parent branch
 * [Canonicalize](https://github.com/WebKit/WebKit/wiki/Source-Control#canonicalization) the commits to be landed
-* Push changes to [svn.webkit.org](https://svn.webkit.org/repository/webkit/)
-* Wait for the GitHub mirror to pick up [svn.webkit.org](https://svn.webkit.org/repository/webkit/) changes
 * Update the pull-request with the landed commit
