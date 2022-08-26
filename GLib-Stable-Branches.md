@@ -5,5 +5,19 @@ This is the page for handling WebKitGTK and WPEWebKit stable branches. We should
 * Branch: https://github.com/WebKit/WebKit/commits/webkitglib/2.38
 * Branch point: [253173@main](https://commits.webkit.org/253173@main)
 ## Proposed merges
+
+* [ ] https://commits.webkit.org/253679@main [GStreamer][WebRTC] Minor improvements in incoming media sources
+* [ ] https://commits.webkit.org/253678@main [GStreamer][WebRTC] Prepare for ICE selected candidate pair notifications
+* [ ] https://commits.webkit.org/253677@main [GStreamer][WebRTC] Align vpx capabilities with LibWebRTC provider
+* [ ] https://commits.webkit.org/253676@main [GStreamer][MediaStream] Skip video track configuration for RTP payloads
+* [ ] https://commits.webkit.org/253675@main [GStreamer][WebRTC] Misc clean-ups in stats gathering support
+* [ ] https://commits.webkit.org/253467@main [GStreamer][MediaStream] Additional fixes for disabled video track handling
+* [ ] https://commits.webkit.org/253297@main [GStreamer][WebRTC] Capabilities probing support
+* [ ] https://commits.webkit.org/253296@main [GStreamer] REGRESSION(253289@main): Broke debug builds
+* [ ] https://commits.webkit.org/253289@main [GStreamer][MediaStream] Video resizing fixes
+* [ ] https://commits.webkit.org/253287@main [WPE][GTK] Create GStreamerWebRTCProvider
+* [ ] https://commits.webkit.org/253257@main [WebRTC] Refactor generic code of LibWebRTCProvider into new WebRTCProvider
+* [ ] https://commits.webkit.org/253201@main [GStreamer][WebRTC] Remote RTP stats fixing
+* [ ] https://commits.webkit.org/253200@main [GStreamer][MediaStream] Lift malloc restriction for stream collection posting
 * [ ] https://commits.webkit.org/253807@main [CoordinatedGraphics] Cache and reuse image-based backing stores
 * [X] https://commits.webkit.org/253605@main Assertion failure when using evaluated empty catch block
