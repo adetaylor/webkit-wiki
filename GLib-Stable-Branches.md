@@ -27,3 +27,4 @@ performance, fix build issues, etc.
 * [ ] https://commits.webkit.org/253200@main [GStreamer][MediaStream] Lift malloc restriction for stream collection posting
 * [x] https://commits.webkit.org/253807@main [CoordinatedGraphics] Cache and reuse image-based backing stores
 * [X] https://commits.webkit.org/253605@main Assertion failure when using evaluated empty catch block
+* [ ] https://commits.webkit.org/253859@main REGRESSION(251332@main): Broke YT seeking in GStreamer ports (again)
