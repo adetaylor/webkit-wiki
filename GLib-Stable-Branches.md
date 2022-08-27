@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/253859@main (in case it's not fixed before 2.38.0) Unreviewed, reverting r251332@main.
 * [ ] https://commits.webkit.org/253679@main [GStreamer][WebRTC] Minor improvements in incoming media sources
 * [ ] https://commits.webkit.org/253678@main [GStreamer][WebRTC] Prepare for ICE selected candidate pair notifications
 * [ ] https://commits.webkit.org/253677@main [GStreamer][WebRTC] Align vpx capabilities with LibWebRTC provider
