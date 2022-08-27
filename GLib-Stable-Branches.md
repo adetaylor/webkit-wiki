@@ -1,9 +1,14 @@
-This is the page for handling WebKitGTK and WPEWebKit stable branches. We should merge not overly intrusive patches that improve stability or performance, fix build issues, etc.
+This is the page for handling WebKitGTK and WPEWebKit stable branches.
+We should merge not overly intrusive patches that improve stability or
+performance, fix build issues, etc.
 
 # 2.38
+
 ## Information
+
 * Branch: https://github.com/WebKit/WebKit/commits/webkitglib/2.38
 * Branch point: [253173@main](https://commits.webkit.org/253173@main)
+
 ## Proposed merges
 
 * [ ] https://commits.webkit.org/253679@main [GStreamer][WebRTC] Minor improvements in incoming media sources
@@ -19,5 +24,5 @@ This is the page for handling WebKitGTK and WPEWebKit stable branches. We should
 * [ ] https://commits.webkit.org/253257@main [WebRTC] Refactor generic code of LibWebRTCProvider into new WebRTCProvider
 * [ ] https://commits.webkit.org/253201@main [GStreamer][WebRTC] Remote RTP stats fixing
 * [ ] https://commits.webkit.org/253200@main [GStreamer][MediaStream] Lift malloc restriction for stream collection posting
-* [ ] https://commits.webkit.org/253807@main [CoordinatedGraphics] Cache and reuse image-based backing stores
+* [x] https://commits.webkit.org/253807@main [CoordinatedGraphics] Cache and reuse image-based backing stores
 * [X] https://commits.webkit.org/253605@main Assertion failure when using evaluated empty catch block
