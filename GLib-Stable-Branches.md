@@ -11,23 +11,23 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/253943@main [GStreamer][WebRTC] Video encoder improvements
-* [ ] https://commits.webkit.org/253940@main [GStreamer][MediaStream] Racy deadlock upon track removal request
-* [ ] https://commits.webkit.org/253936@main [GStreamer][WebRTC] Capabilities tweaks
-* [ ] https://commits.webkit.org/253897@main [GStreamer][MediaStream] Deadlock when disposing player while handling rotation tag
+* [x] https://commits.webkit.org/253943@main [GStreamer][WebRTC] Video encoder improvements
+* [x] https://commits.webkit.org/253940@main [GStreamer][MediaStream] Racy deadlock upon track removal request
+* [x] https://commits.webkit.org/253936@main [GStreamer][WebRTC] Capabilities tweaks
+* [x] https://commits.webkit.org/253897@main [GStreamer][MediaStream] Deadlock when disposing player while handling rotation tag
 * [ ] https://commits.webkit.org/253859@main (in case it's not fixed before 2.38.0) Unreviewed, reverting r251332@main.
-* [ ] https://commits.webkit.org/253679@main [GStreamer][WebRTC] Minor improvements in incoming media sources
-* [ ] https://commits.webkit.org/253678@main [GStreamer][WebRTC] Prepare for ICE selected candidate pair notifications
-* [ ] https://commits.webkit.org/253677@main [GStreamer][WebRTC] Align vpx capabilities with LibWebRTC provider
-* [ ] https://commits.webkit.org/253676@main [GStreamer][MediaStream] Skip video track configuration for RTP payloads
-* [ ] https://commits.webkit.org/253675@main [GStreamer][WebRTC] Misc clean-ups in stats gathering support
-* [ ] https://commits.webkit.org/253467@main [GStreamer][MediaStream] Additional fixes for disabled video track handling
-* [ ] https://commits.webkit.org/253297@main [GStreamer][WebRTC] Capabilities probing support
-* [ ] https://commits.webkit.org/253296@main [GStreamer] REGRESSION(253289@main): Broke debug builds
-* [ ] https://commits.webkit.org/253289@main [GStreamer][MediaStream] Video resizing fixes
-* [ ] https://commits.webkit.org/253287@main [WPE][GTK] Create GStreamerWebRTCProvider
-* [ ] https://commits.webkit.org/253257@main [WebRTC] Refactor generic code of LibWebRTCProvider into new WebRTCProvider
-* [ ] https://commits.webkit.org/253201@main [GStreamer][WebRTC] Remote RTP stats fixing
-* [ ] https://commits.webkit.org/253200@main [GStreamer][MediaStream] Lift malloc restriction for stream collection posting
+* [x] https://commits.webkit.org/253679@main [GStreamer][WebRTC] Minor improvements in incoming media sources
+* [x] https://commits.webkit.org/253678@main [GStreamer][WebRTC] Prepare for ICE selected candidate pair notifications
+* [x] https://commits.webkit.org/253677@main [GStreamer][WebRTC] Align vpx capabilities with LibWebRTC provider
+* [x] https://commits.webkit.org/253676@main [GStreamer][MediaStream] Skip video track configuration for RTP payloads
+* [x] https://commits.webkit.org/253675@main [GStreamer][WebRTC] Misc clean-ups in stats gathering support
+* [x] https://commits.webkit.org/253467@main [GStreamer][MediaStream] Additional fixes for disabled video track handling
+* [x] https://commits.webkit.org/253297@main [GStreamer][WebRTC] Capabilities probing support
+* [x] https://commits.webkit.org/253296@main [GStreamer] REGRESSION(253289@main): Broke debug builds
+* [x] https://commits.webkit.org/253289@main [GStreamer][MediaStream] Video resizing fixes
+* [x] https://commits.webkit.org/253287@main [WPE][GTK] Create GStreamerWebRTCProvider
+* [x] https://commits.webkit.org/253257@main [WebRTC] Refactor generic code of LibWebRTCProvider into new WebRTCProvider
+* [x] https://commits.webkit.org/253201@main [GStreamer][WebRTC] Remote RTP stats fixing
+* [x] https://commits.webkit.org/253200@main [GStreamer][MediaStream] Lift malloc restriction for stream collection posting
 * [x] https://commits.webkit.org/253807@main [CoordinatedGraphics] Cache and reuse image-based backing stores
 * [X] https://commits.webkit.org/253605@main Assertion failure when using evaluated empty catch block
