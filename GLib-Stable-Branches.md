@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/253980@main [GStreamer][WebRTC] End-point pipeline improvements
 * [x] https://commits.webkit.org/253943@main [GStreamer][WebRTC] Video encoder improvements
 * [x] https://commits.webkit.org/253940@main [GStreamer][MediaStream] Racy deadlock upon track removal request
 * [x] https://commits.webkit.org/253936@main [GStreamer][WebRTC] Capabilities tweaks
