@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/254094@main REGRESSION(253383@main): Build broken with ENABLE(VIDEO) disabled
 * [ ] https://commits.webkit.org/254093@main [GStreamer][MediaStream] Build failing for GStreamer versions < 1.18
 * [x] https://commits.webkit.org/253980@main [GStreamer][WebRTC] End-point pipeline improvements
 * [x] https://commits.webkit.org/253943@main [GStreamer][WebRTC] Video encoder improvements
