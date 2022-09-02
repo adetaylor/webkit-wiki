@@ -11,12 +11,12 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/253980@main [GStreamer][WebRTC] End-point pipeline improvements
+* [x] https://commits.webkit.org/253980@main [GStreamer][WebRTC] End-point pipeline improvements
 * [x] https://commits.webkit.org/253943@main [GStreamer][WebRTC] Video encoder improvements
 * [x] https://commits.webkit.org/253940@main [GStreamer][MediaStream] Racy deadlock upon track removal request
 * [x] https://commits.webkit.org/253936@main [GStreamer][WebRTC] Capabilities tweaks
 * [x] https://commits.webkit.org/253897@main [GStreamer][MediaStream] Deadlock when disposing player while handling rotation tag
-* [ ] https://commits.webkit.org/253859@main (in case it's not fixed before 2.38.0) Unreviewed, reverting r251332@main.
+* [x] https://commits.webkit.org/253859@main (in case it's not fixed before 2.38.0) Unreviewed, reverting r251332@main.
 * [x] https://commits.webkit.org/253679@main [GStreamer][WebRTC] Minor improvements in incoming media sources
 * [x] https://commits.webkit.org/253678@main [GStreamer][WebRTC] Prepare for ICE selected candidate pair notifications
 * [x] https://commits.webkit.org/253677@main [GStreamer][WebRTC] Align vpx capabilities with LibWebRTC provider
