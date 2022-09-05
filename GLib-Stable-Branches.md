@@ -11,11 +11,11 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/254121@main [GLib] Fix build with CMake &lt 3.17
-* [ ] https://commits.webkit.org/254099@main [WPE] Kinetic scrolling doesn't work in overflow scrolling
-* [ ] https://commits.webkit.org/254097@main [GLIB] WheelEvent (phase=ended) has to be relayed to the scrollingTree if user scroll is in progress
-* [ ] https://commits.webkit.org/254094@main REGRESSION(253383@main): Build broken with ENABLE(VIDEO) disabled
-* [ ] https://commits.webkit.org/254093@main [GStreamer][MediaStream] Build failing for GStreamer versions < 1.18
+* [x] https://commits.webkit.org/254121@main [GLib] Fix build with CMake &lt 3.17
+* [x] https://commits.webkit.org/254099@main [WPE] Kinetic scrolling doesn't work in overflow scrolling
+* [x] https://commits.webkit.org/254097@main [GLIB] WheelEvent (phase=ended) has to be relayed to the scrollingTree if user scroll is in progress
+* [ ] <del>https://commits.webkit.org/254094@main REGRESSION(253383@main): Build broken with ENABLE(VIDEO) disabled</del> (unneeded)
+* [x] https://commits.webkit.org/254093@main [GStreamer][MediaStream] Build failing for GStreamer versions &lt 1.18
 * [x] https://commits.webkit.org/253980@main [GStreamer][WebRTC] End-point pipeline improvements
 * [x] https://commits.webkit.org/253943@main [GStreamer][WebRTC] Video encoder improvements
 * [x] https://commits.webkit.org/253940@main [GStreamer][MediaStream] Racy deadlock upon track removal request
