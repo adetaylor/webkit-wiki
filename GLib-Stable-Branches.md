@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [x] https://commits.webkit.org/254142@main [GStreamer] MediaPlayerPrivateGStreamer: Abort stale tasks on flushes
 * [x] https://commits.webkit.org/254121@main [GLib] Fix build with CMake &lt 3.17
 * [x] https://commits.webkit.org/254099@main [WPE] Kinetic scrolling doesn't work in overflow scrolling
 * [x] https://commits.webkit.org/254097@main [GLIB] WheelEvent (phase=ended) has to be relayed to the scrollingTree if user scroll is in progress
