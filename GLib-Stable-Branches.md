@@ -11,7 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/254223@main [GStreamer] WebAudio drums demo makes WebKit GStreamer based ports crash
+* [x] https://commits.webkit.org/254223@main [GStreamer] WebAudio drums demo makes WebKit GStreamer based ports crash
 * [x] https://commits.webkit.org/254142@main [GStreamer] MediaPlayerPrivateGStreamer: Abort stale tasks on flushes
 * [x] https://commits.webkit.org/254121@main [GLib] Fix build with CMake &lt 3.17
 * [x] https://commits.webkit.org/254099@main [WPE] Kinetic scrolling doesn't work in overflow scrolling
