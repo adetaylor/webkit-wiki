@@ -39,4 +39,4 @@ performance, fix build issues, etc.
 * [x] https://commits.webkit.org/253200@main [GStreamer][MediaStream] Lift malloc restriction for stream collection posting
 * [x] https://commits.webkit.org/253807@main [CoordinatedGraphics] Cache and reuse image-based backing stores
 * [X] https://commits.webkit.org/253605@main Assertion failure when using evaluated empty catch block
-* [ ] https://commits.webkit.org/254213@main Revert 252943@main for causing constant flickering on aa.com
+* [x] https://commits.webkit.org/254213@main Revert 252943@main for causing constant flickering on aa.com
