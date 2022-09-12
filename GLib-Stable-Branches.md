@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/254293@main Use a single xdg-dbus-proxy process
 * [ ] https://commits.webkit.org/254373@main [GStreamer][Debug] 2 mediastream tests hitting asserts
 * [x] https://commits.webkit.org/254223@main [GStreamer] WebAudio drums demo makes WebKit GStreamer based ports crash
 * [x] https://commits.webkit.org/254142@main [GStreamer] MediaPlayerPrivateGStreamer: Abort stale tasks on flushes
