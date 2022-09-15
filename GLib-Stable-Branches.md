@@ -11,7 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/254509@main [Nicosia] Async Scrolling: some elements are jumpy in gitlab
+* [x] https://commits.webkit.org/254509@main [Nicosia] Async Scrolling: some elements are jumpy in gitlab
 * [ ] https://commits.webkit.org/254293@main Use a single xdg-dbus-proxy process
 * [x] https://commits.webkit.org/254373@main [GStreamer][Debug] 2 mediastream tests hitting asserts
 * [x] https://commits.webkit.org/254223@main [GStreamer] WebAudio drums demo makes WebKit GStreamer based ports crash
@@ -43,4 +43,4 @@ performance, fix build issues, etc.
 * [x] https://commits.webkit.org/253807@main [CoordinatedGraphics] Cache and reuse image-based backing stores
 * [X] https://commits.webkit.org/253605@main Assertion failure when using evaluated empty catch block
 * [x] https://commits.webkit.org/254213@main Revert 252943@main for causing constant flickering on aa.com
-* [ ] https://commits.webkit.org/254237@main [GTK4] UI process hang when opening HTML select elements (combo boxes)
+* [x] https://commits.webkit.org/254237@main [GTK4] UI process hang when opening HTML select elements (combo boxes)
