@@ -11,7 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/254163@main WebNotificationManager: fix build if SERVICE_WORKER=OFF
+* [x] https://commits.webkit.org/254163@main WebNotificationManager: fix build if SERVICE_WORKER=OFF
 * [x] https://commits.webkit.org/254509@main [Nicosia] Async Scrolling: some elements are jumpy in gitlab
 * [ ] https://commits.webkit.org/254293@main Use a single xdg-dbus-proxy process
 * [x] https://commits.webkit.org/254373@main [GStreamer][Debug] 2 mediastream tests hitting asserts
