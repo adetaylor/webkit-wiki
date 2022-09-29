@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/254673@main [GLIB] Bump Safari version in user agent header for Safari 16
 * [x] https://commits.webkit.org/254163@main WebNotificationManager: fix build if SERVICE_WORKER=OFF
 * [x] https://commits.webkit.org/254509@main [Nicosia] Async Scrolling: some elements are jumpy in gitlab
 * [ ] https://commits.webkit.org/254293@main Use a single xdg-dbus-proxy process
