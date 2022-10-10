@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/255325@main REGRESSION(254232@main): Causes process launching to use fork + exec instead of posix_spawn
 * [x] https://commits.webkit.org/255071@main [JSC][ARMv7] Fix clang compiler errors Constexpr if with a non-bool condition
 * [ ] https://commits.webkit.org/254673@main [GLIB] Bump Safari version in user agent header for Safari 16
 * [x] https://commits.webkit.org/254163@main WebNotificationManager: fix build if SERVICE_WORKER=OFF
