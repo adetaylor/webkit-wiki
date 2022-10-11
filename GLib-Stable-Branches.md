@@ -11,12 +11,12 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/255325@main REGRESSION(254232@main): Causes process launching to use fork + exec instead of posix_spawn
+* [x] https://commits.webkit.org/255325@main REGRESSION(254232@main): Causes process launching to use fork + exec instead of posix_spawn
 * [x] https://commits.webkit.org/255071@main [JSC][ARMv7] Fix clang compiler errors Constexpr if with a non-bool condition
 * [ ] https://commits.webkit.org/254673@main [GLIB] Bump Safari version in user agent header for Safari 16
 * [x] https://commits.webkit.org/254163@main WebNotificationManager: fix build if SERVICE_WORKER=OFF
 * [x] https://commits.webkit.org/254509@main [Nicosia] Async Scrolling: some elements are jumpy in gitlab
-* [ ] https://commits.webkit.org/254293@main Use a single xdg-dbus-proxy process
+* [x] https://commits.webkit.org/254293@main Use a single xdg-dbus-proxy process
 * [x] https://commits.webkit.org/254373@main [GStreamer][Debug] 2 mediastream tests hitting asserts
 * [x] https://commits.webkit.org/254223@main [GStreamer] WebAudio drums demo makes WebKit GStreamer based ports crash
 * [x] https://commits.webkit.org/254142@main [GStreamer] MediaPlayerPrivateGStreamer: Abort stale tasks on flushes
