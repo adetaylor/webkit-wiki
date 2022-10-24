@@ -12,8 +12,8 @@ performance, fix build issues, etc.
 ## Proposed merges
 
 * [ ] https://commits.webkit.org/255721@main [SOUP] Spammed by 0-byte downloads on imgur.com
-* [ ] https://commits.webkit.org/255530@main [GTK] D-Bus proxy quietly fails if host bus address is not mounted in xdg-dbus-proxy's sandbox
-* [ ] https://commits.webkit.org/255218@main [GLib] D-Bus proxy quietly fails if host session bus address is an abstract socket
+* [x] https://commits.webkit.org/255530@main [GTK] D-Bus proxy quietly fails if host bus address is not mounted in xdg-dbus-proxy's sandbox
+* [x] https://commits.webkit.org/255218@main [GLib] D-Bus proxy quietly fails if host session bus address is an abstract socket
 * [x] https://commits.webkit.org/255325@main REGRESSION(254232@main): Causes process launching to use fork + exec instead of posix_spawn
 * [x] https://commits.webkit.org/255071@main [JSC][ARMv7] Fix clang compiler errors Constexpr if with a non-bool condition
 * [ ] https://commits.webkit.org/254673@main [GLIB] Bump Safari version in user agent header for Safari 16
