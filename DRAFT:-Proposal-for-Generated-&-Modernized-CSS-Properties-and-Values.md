@@ -83,3 +83,9 @@ In both cases, we can utilize the new metadata to generate the types we need, bu
 1. Generate CSSParserFastPaths keyword property related functions from CSSProperties.json
 2. Generate CSSPropertyParser::parseSingleValue, utilizing a similar pattern to StyleBuilderCustom/StyleBuilderGenerated to move us to a world where non-generated parser functions must be noted in CSSProperties.json (like "codegen-properties" / "custom") and have a common naming scheme based on the property name. (This gets us to the point where if we want each property to have a unique result type, we have a generated common bottleneck, CSSPropertyParser::parseSingleValue, that can type-erase to CSSValue for us).
 3. Generate, but don't use yet, the set of types required for each CSSPropertyID + Top Level Value pair possible, and analyze results.
+
+
+
+## Needs a plan
+
+* CSSOM wrappers: likely would want to annotate CSSProperties.json to indicate what kind of wrapper is needed and generate the wrapping functions.
