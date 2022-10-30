@@ -4,7 +4,7 @@ The current implementation of CSS Values in WebKit is organic and adhoc, and whi
 
 * Generate as much as possible from CSSProperties.json, including the property parsers
 * Strongly typed, immutable, and comprehensive output from the property parsers
-  - We should never have to "trust" that the parser only produces "valid" values, the type system should enforce it for us
+  - We should never have to "trust" that the parser only produces "valid" values, the type system should enforce it
 * Thread safe (the need for the CSS property parser from Workers is clear, let's make it foolproof)
 * Memory efficient (can't regress things)
 
