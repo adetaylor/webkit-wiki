@@ -76,3 +76,10 @@ Another possibility, and perhaps a better starting point, would be to create a s
 Here, we utilize the existing `values` key and extend it with special strings that start and end with `<` and `>` (mimicking the grammar a bit).
 
 In both cases, we can utilize the new metadata to generate the types we need, but additionally, we can start to generate the actual property parsers themselves. 
+
+
+## Next Steps
+
+1. Generate CSSParserFastPaths keyword property related functions from CSSProperties.json
+2. Generate CSSPropertyParser::parseSingleValue, utilizing a similar pattern to StyleBuilderCustom/StyleBuilderGenerated to move us to a world where non-generated parser functions must be noted in CSSProperties.json (like "codegen-properties" / "custom") and have a common naming scheme based on the property name. (This gets us to the point where if we want each property to have a unique result type, we have a generated common bottleneck, CSSPropertyParser::parseSingleValue, that can type-erase to CSSValue for us).
+3. Generate, but don't use yet, the set of types required for each CSSPropertyID + Top Level Value pair possible, and analyze results.
