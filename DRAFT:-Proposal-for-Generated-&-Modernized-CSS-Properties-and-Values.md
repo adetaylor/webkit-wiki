@@ -10,6 +10,8 @@ The current implementation of CSS Values in WebKit is organic and adhoc, and whi
 
 ## Details
 
+### Representation
+
 CSS properties in WebCore are currently modeled as a tuple of `CSSPropertyID` & `metadata` & `CSSValue`, where `CSSPropertyID` is an integer constant (currently 0-513, amusingly 1 larger than 2^9th, so this requires 10 bits), `metadata` is a set 6 bits describing longhand/shorthand, implicitness and importance, and `CSSValue` is pointer to a reference counted type hierarchy (though non-virtualized) representation (64 bits inline, but more when you look at the pointed to value, somewhat mitigated by the use of CSSValuePool). 
 
 One thing to notice is that there is an inherit inefficiency in using a fully general CSSValue for every property, as not every property can be represented using any CSS value. 
