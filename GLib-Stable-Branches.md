@@ -11,14 +11,14 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/256225@main [GStreamer][WebRTC] Media rendering improvements
-* [ ] https://commits.webkit.org/256149@main [GStreamer][WebRTC] Events forwarding between end-point and its consumers
+* [x] https://commits.webkit.org/256225@main [GStreamer][WebRTC] Media rendering improvements
+* [x] https://commits.webkit.org/256149@main [GStreamer][WebRTC] Events forwarding between end-point and its consumers
 * [x] https://commits.webkit.org/255721@main [SOUP] Spammed by 0-byte downloads on imgur.com
 * [x] https://commits.webkit.org/255530@main [GTK] D-Bus proxy quietly fails if host bus address is not mounted in xdg-dbus-proxy's sandbox
 * [x] https://commits.webkit.org/255218@main [GLib] D-Bus proxy quietly fails if host session bus address is an abstract socket
 * [x] https://commits.webkit.org/255325@main REGRESSION(254232@main): Causes process launching to use fork + exec instead of posix_spawn
 * [x] https://commits.webkit.org/255071@main [JSC][ARMv7] Fix clang compiler errors Constexpr if with a non-bool condition
-* [ ] https://commits.webkit.org/254673@main [GLIB] Bump Safari version in user agent header for Safari 16
+* [x] https://commits.webkit.org/254673@main [GLIB] Bump Safari version in user agent header for Safari 16
 * [x] https://commits.webkit.org/254163@main WebNotificationManager: fix build if SERVICE_WORKER=OFF
 * [x] https://commits.webkit.org/254509@main [Nicosia] Async Scrolling: some elements are jumpy in gitlab
 * [x] https://commits.webkit.org/254293@main Use a single xdg-dbus-proxy process
@@ -28,7 +28,6 @@ performance, fix build issues, etc.
 * [x] https://commits.webkit.org/254121@main [GLib] Fix build with CMake &lt 3.17
 * [x] https://commits.webkit.org/254099@main [WPE] Kinetic scrolling doesn't work in overflow scrolling
 * [x] https://commits.webkit.org/254097@main [GLIB] WheelEvent (phase=ended) has to be relayed to the scrollingTree if user scroll is in progress
-* [ ] <del>https://commits.webkit.org/254094@main REGRESSION(253383@main): Build broken with ENABLE(VIDEO) disabled</del> (unneeded)
 * [x] https://commits.webkit.org/254093@main [GStreamer][MediaStream] Build failing for GStreamer versions &lt 1.18
 * [x] https://commits.webkit.org/253980@main [GStreamer][WebRTC] End-point pipeline improvements
 * [x] https://commits.webkit.org/253943@main [GStreamer][WebRTC] Video encoder improvements
