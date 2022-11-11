@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/256566@main Network process crash in WebResourceLoadStatisticsStore::registrableDomains
 * [ ] https://commits.webkit.org/256486@main Crash in pas_segregated_page_switch_lock_and_rebias_while_ineligible_impl
 * [x] https://commits.webkit.org/256225@main [GStreamer][WebRTC] Media rendering improvements
 * [x] https://commits.webkit.org/256149@main [GStreamer][WebRTC] Events forwarding between end-point and its consumers
