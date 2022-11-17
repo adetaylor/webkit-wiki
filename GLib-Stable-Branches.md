@@ -11,6 +11,8 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/256395@main [GStreamer][WebRTC] Video encoder/decoder stats support
+* [ ] https://commits.webkit.org/255211@main [GStreamer][WebRTC] Set MTU to 1200 on RTP payloaders
 * [ ] https://commits.webkit.org/255632@main [GStreamer] Critical warnings in appsink workaround thing
 * [ ] https://commits.webkit.org/256654@main [GLIB] Fix MPRIS in flatpak sandbox
 * [ ] https://commits.webkit.org/256566@main Network process crash in WebResourceLoadStatisticsStore::registrableDomains
