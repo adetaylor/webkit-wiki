@@ -11,6 +11,8 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://github.com/WebKit/WebKit/pull/7148 [GStreamer] Video element keeps changing the aspect ratio randomly (when the orientation information is in video's metadata)
+* [ ] https://commits.webkit.org/257838@main [GStreamer][MSE] Fix a caps leak in AppendPipeline
 * [ ] https://commits.webkit.org/256395@main [GStreamer][WebRTC] Video encoder/decoder stats support
 * [ ] https://commits.webkit.org/255211@main [GStreamer][WebRTC] Set MTU to 1200 on RTP payloaders
 * [ ] https://commits.webkit.org/255632@main [GStreamer] Critical warnings in appsink workaround thing
