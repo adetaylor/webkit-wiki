@@ -11,15 +11,15 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/257775@main Fix build with Ruby 3.2
-* [ ] https://github.com/WebKit/WebKit/pull/7148 [GStreamer] Video element keeps changing the aspect ratio randomly (when the orientation information is in video's metadata)
+* [ ] https://commits.webkit.org/257912@main [GStreamer] Video element keeps changing the aspect ratio randomly (when the orientation information is in video's metadata)
 * [ ] https://commits.webkit.org/257838@main [GStreamer][MSE] Fix a caps leak in AppendPipeline
-* [ ] https://commits.webkit.org/256395@main [GStreamer][WebRTC] Video encoder/decoder stats support
-* [ ] https://commits.webkit.org/255211@main [GStreamer][WebRTC] Set MTU to 1200 on RTP payloaders
-* [ ] https://commits.webkit.org/255632@main [GStreamer] Critical warnings in appsink workaround thing
-* [ ] ~~https://commits.webkit.org/256654@main [GLIB] Fix MPRIS in flatpak sandbox~~ not a good backport candidate currently, see bug #247527
+* [ ] https://commits.webkit.org/257775@main Fix build with Ruby 3.2
 * [ ] https://commits.webkit.org/256566@main Network process crash in WebResourceLoadStatisticsStore::registrableDomains
 * [ ] https://commits.webkit.org/256486@main Crash in pas_segregated_page_switch_lock_and_rebias_while_ineligible_impl
+* [ ] https://commits.webkit.org/256395@main [GStreamer][WebRTC] Video encoder/decoder stats support
+* [ ] https://commits.webkit.org/255632@main [GStreamer] Critical warnings in appsink workaround thing
+* [ ] ~~https://commits.webkit.org/255211@main [GStreamer][WebRTC] Set MTU to 1200 on RTP payloaders~~ commit is before branchpoint
+* [ ] ~~https://commits.webkit.org/256654@main [GLIB] Fix MPRIS in flatpak sandbox~~ not a good backport candidate currently, see bug #247527
 * [x] https://commits.webkit.org/256225@main [GStreamer][WebRTC] Media rendering improvements
 * [x] https://commits.webkit.org/256149@main [GStreamer][WebRTC] Events forwarding between end-point and its consumers
 * [x] https://commits.webkit.org/255721@main [SOUP] Spammed by 0-byte downloads on imgur.com
