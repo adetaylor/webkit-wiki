@@ -10,7 +10,7 @@ Mentor: @justin_michaud PST
 
 We are missing SIMD arm instructions in our disassembly. This task involves adding those, and making the disassembler output more pretty. 
 
-See Source/JavaScriptCore/disassembler/ARM64/A64DOpcode.h.
+See `Source/JavaScriptCore/disassembler/ARM64/A64DOpcode.h`.
 
 # JavaScriptCore (hard)
 
