@@ -9,6 +9,7 @@
 > [Contributing Code](/WebKit/WebKit/wiki/Contributing#contributing-code) <br>
 > [Code Review](/WebKit/WebKit/wiki/Contributing#code-review) <br>
 > [Landing Changes](/WebKit/WebKit/wiki/Contributing#landing-changes) <br>
+> [Tasks for New Contributors](/WebKit/WebKit/wiki/Tasks-for-new-contributors) <br>
 ### [Pull Requests](/WebKit/WebKit/wiki/Pull-Requests)
 > [Bug Tracking](/WebKit/WebKit/wiki/Pull-Requests#bug-tracking) <br>
 > [Branching](/WebKit/WebKit/wiki/Pull-Requests#branching) <br>
