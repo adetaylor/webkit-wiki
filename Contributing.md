@@ -75,3 +75,25 @@ To land a change, run `git-webkit land` from the branch to be landed. Note that 
 * Rebase the pull-request against its parent branch
 * [Canonicalize](https://github.com/WebKit/WebKit/wiki/Source-Control#canonicalization) the commits to be landed
 * Update the pull-request with the landed commit
+
+## Running Nightly Builds
+
+Download the appropriate build for your platform, updating the revision number. You may need to go back a few commits to find a build:
+```
+AS: https://s3-us-west-2.amazonaws.com/archives.webkit.org/mac-ventura-x86_64%20arm64-release/258xxx@main.zip
+Intel: https://s3-us-west-2.amazonaws.com/archives.webkit.org/mac-ventura-x86_64%20arm64-release/258xxx@main.zip
+```
+Then:
+```
+cd 258xxx@main
+sudo xattr -r -d com.apple.quarantine .
+```
+
+From here, you can try running Safari:
+```
+run-webkit-archive
+```
+A more stable way to run the nightly is to run MiniBrowser:
+```
+export WK=/Users/user/Downloads/258xxx@main/Release/ && DYLD_FRAMEWORK_PATH=$WK DYLD_LIBRARY_PATH=$WK __XPC_DYLD_FRAMEWORK_PATH=$WK __XPC_DYLD_LIBRARY_PATH=$WK $WK/MiniBrowser.app/Contents/MacOS/MiniBrowser
+```
