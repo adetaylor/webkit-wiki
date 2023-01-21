@@ -19,3 +19,9 @@ See `Source/JavaScriptCore/disassembler/ARM64/A64DOpcode.h`.
 Mentor: [@justinmichaud](/justinmichaud) PST
 
 This task involves adding a new JSC feature flag, implementing the listed instructions in the proposal on ARM and Intel in both WASM JIT tiers, and importing the spec tests / writing your own.
+
+## Implement extended constant (stage 4)
+
+Mentor: [@justinmichaud](/justinmichaud)  [@Constellation](/Constellation) PST
+
+This task involves adding a new JSC feature flag, implementing the listed instructions in the proposal to allow more expression for wasm constants, and importing the spec tests / writing your own.
