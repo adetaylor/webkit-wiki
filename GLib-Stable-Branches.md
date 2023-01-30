@@ -11,8 +11,8 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/259434@main HTMLInputElement::setValueForUser should dispatch an input event
-* [ ] https://commits.webkit.org/258293@main [GStreamer] ImageDecoder fixes
+* [x] https://commits.webkit.org/259434@main HTMLInputElement::setValueForUser should dispatch an input event
+* [x] https://commits.webkit.org/258293@main [GStreamer] ImageDecoder fixes
 * [x] https://commits.webkit.org/257912@main [GStreamer] Video element keeps changing the aspect ratio randomly (when the orientation information is in video's metadata)
 * [x] https://commits.webkit.org/257838@main [GStreamer][MSE] Fix a caps leak in AppendPipeline
 * [x] https://commits.webkit.org/257775@main Fix build with Ruby 3.2
