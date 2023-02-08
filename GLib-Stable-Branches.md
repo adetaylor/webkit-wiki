@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/259999@main [GLIB] always update the active uri of the frame
 * [x] https://commits.webkit.org/259434@main HTMLInputElement::setValueForUser should dispatch an input event
 * [x] https://commits.webkit.org/258293@main [GStreamer] ImageDecoder fixes
 * [x] https://commits.webkit.org/257912@main [GStreamer] Video element keeps changing the aspect ratio randomly (when the orientation information is in video's metadata)
