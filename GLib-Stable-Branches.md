@@ -2,6 +2,17 @@ This is the page for handling WebKitGTK and WPEWebKit stable branches.
 We should merge not overly intrusive patches that improve stability or
 performance, fix build issues, etc.
 
+# 2.40
+
+## Information
+
+ * Branch: https://github.com/WebKit/WebKit/commits/webkitglib/2.40
+ * Branch point: [260527@main](https://commits.webkit.org/260527@main)
+
+## Proposed merges
+
+ * [ ] https://commits.webkit.org/260584@main LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
+
 # 2.38
 
 ## Information
