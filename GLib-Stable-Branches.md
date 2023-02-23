@@ -11,7 +11,8 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
- * [ ] https://commits.webkit.org/260584@main LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
+ * [ ] https://github.com/WebKit/WebKit/pull/10517 – [Linux] DMABufObject modifiers should default to being not-present #10517
+ * [x] https://commits.webkit.org/260584@main – LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
 
 # 2.38
 
