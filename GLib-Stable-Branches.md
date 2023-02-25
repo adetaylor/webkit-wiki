@@ -11,8 +11,8 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
- * [ ] https://github.com/WebKit/WebKit/pull/10458 – [CMake] Rework decision to enable -gsplit-dwarf by default
- * [ ] https://github.com/WebKit/WebKit/pull/10517 – [Linux] DMABufObject modifiers should default to being not-present #10517
+ * [x] https://commits.webkit.org/260818@main – [CMake] Rework decision to enable -gsplit-dwarf by default
+ * [x] https://commits.webkit.org/260790@main – [Linux] DMABufObject modifiers should default to being not-present #10517
  * [x] https://commits.webkit.org/260584@main – LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
 
 # 2.38
