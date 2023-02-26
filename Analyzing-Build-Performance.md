@@ -1,12 +1,10 @@
-# Analyzing Build Performance
-
 To effectively reduce build times, it is first important to understand where that time is being spent. This page documents various tools and techniques used to perform detailed analysis of where the complier is spending its time.
 
-## Clang 9+
+# Clang 9+
 
 Clang 9 has introduced a new flag, [-ftime-trace](https://releases.llvm.org/9.0.0/tools/clang/docs/ReleaseNotes.html#new-compiler-flags), which will generate time-profile information as a .json artifact during compilation. These artifacts include timing information on a per-header, per-function, per-template, or even per-optimization level.
 
-## Building ClangBuildAnalyzer
+# Building ClangBuildAnalyzer
 
 While per-object-file trace information is useful for uncovering what causes compiling a specific source file to take as long as it does, tracing overall build time requires summarizing those traces across the entire project. The same person who originally authored the Clang tracing patch also built a summarization tool using those per-object-file traces as input, [ClangBuildAnalyzer](https://github.com/aras-p/ClangBuildAnalyzer).  Here's how to build ClangBuildAnalyzer with Xcode on macOS:
 
@@ -15,7 +13,7 @@ While per-object-file trace information is useful for uncovering what causes com
 3. `xcodebuild`
 4. Copy `build/Release/ClangBuildAnalyzer` to a location in `$PATH`
 
-## Building WebKit with tracing enabled
+# Building WebKit with tracing enabled
 
 1. Clean your build directory (but make sure it still ''exists'').
 2. `ClangBuildAnalyzer --start path/to/WebKitBuild`
@@ -33,7 +31,7 @@ Then, when the build is complete:
 
 ClangBuildAnalyzer writes a file with the current time to your build directory when run with `--start`. Then when run with `--stop`, it collects all of the trace files generated during that time window, and collates them into the output file. `--analyze` turns that into human-readable output. Profiling individual projects within WebKit would involve running steps 1-5 from within, e.g., the Source/WebCore directory.
 
-## Resolving Expensive Headers
+# Resolving Expensive Headers
 
 ClangBuildAnalyzer will generate a list of the ten most expensive (in terms of compilation time) headers encountered during the build. The current list of most expensive headers for WebKit projects is tracked at [[Expensive Headers]].
 
@@ -53,11 +51,11 @@ For example:
 
 From this we can see that JSDOMGlobalObject.h is a very expensive header; it contributes about 3.3s of compile time, on average, to every source file which includes it. And it is included 246 times, which given the WebKit unified build system, means it is included by a majority of source files in the WebCore project. For these expensive headers, its often the case that the "expensive" header is expensive due to including other expensive headers, and one approach to make that header less expensive is to forward declare types rather than include their definitions. In cases where inline implementations of methods make forward declaration impossible, those inline definitions can be moved into a `<Type>Inlines.h` file, and the original declarations annotated with `inline`. Source files which contain references to those inline functions must include the `<Type>Inlines.h` file, or the compile will generate a `-Wundefined-inline` error.
 
-### Header Best Practices
+## Header Best Practices
 
 While resolving some expensive headers, a few best practices stood out to reduce compilation times without regressing runtime performance:
 
-#### Forward-declare all the things
+### Forward-declare all the things
 
 Forward-declaring types used by your class's methods allows clients who don't call those methods to not incur the compile-time cost of including those types' headers.
 
@@ -102,7 +100,7 @@ std::unique_ptr<YourClass> MyClass::createUnique()
 ```
 
 
-#### Avoid class-scoped enums
+### Avoid class-scoped enums
 
 When defining a public enumeration for a class, do so at namespace scope rather than inside the class, and always specify an explicit enum size. E.g.:
 
@@ -143,7 +141,7 @@ class YourClass {
 };
 ```
 
-#### Add Inlines.h headers
+### Add Inlines.h headers
 
 When explicitly inlining a function definition for performance reasons, and that definition requires including an external header, putting the inline definition in an Inlines.h header file. Annotate the class method declaration with `inline`, which will cause a compiler warning if the Inline.h header is not included by the caller. E.g.:
 
@@ -172,7 +170,7 @@ public:
 inline YourClass& MyClass::getFoo() { return YourClass::foo(); }
 ```
 
-#### Avoid Virtual Inlines
+### Avoid Virtual Inlines
 
 Virtual functions will almost never gain any benefit from being inlined (unless callers cast the function itself, e.g.: `foo->Derived::bar()` instead of `foo->bar()`, which is a very uncommon practice). If a virtual function definition in a header file requires including an external header, consider moving the definition into the implementation file. E.g.:
 
@@ -206,7 +204,7 @@ private:
 void MyClass::doFoo() { m_yourClass->doFoo(); }
 ```
 
-#### Avoid Private Inlines
+### Avoid Private Inlines
 
 Private functions, by definition, can only be called from class methods and declared friends, so defining private functions in the class header file is of limited value. If those private functions are called by friends or other inlined functions, consider moving the private function definition into an Inline.h header. Otherwise, consider moving the definition into the implementation file.
 
