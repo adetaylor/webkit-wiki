@@ -35,7 +35,9 @@ ClangBuildAnalyzer writes a file with the current time to your build directory w
 
 ## Resolving Expensive Headers
 
-ClangBuildAnalyzer will generate a list of the ten most expensive (in terms of compilation time) headers encountered during the build. For example:
+ClangBuildAnalyzer will generate a list of the ten most expensive (in terms of compilation time) headers encountered during the build. The current list of most expensive headers for WebKit projects is tracked at [[Expensive Headers]].
+
+For example:
 
 ``` cpp
 *** Expensive headers:
