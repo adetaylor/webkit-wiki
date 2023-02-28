@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [ ] https://commits.webkit.org/260973@main [GTK] Updated Swedish translation
  * [ ] https://commits.webkit.org/260949@main [GLib] New API to get the request body of WebKitURISchemeRequest
  * [ ] https://commits.webkit.org/260875@main REGRESSION(260082@main): [GStreamer][1.20] YT broken
  * [x] https://commits.webkit.org/260818@main [CMake] Rework decision to enable -gsplit-dwarf by default
