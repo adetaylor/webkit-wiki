@@ -11,11 +11,11 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/260989@main - [GLib] Bump Safari version in user agent header
-* [ ] https://commits.webkit.org/260973@main - [GTK] Updated Swedish translation
-* [ ] https://commits.webkit.org/260949@main - [GLib] New API to get the request body of WebKitURISchemeRequest
-* [ ] https://commits.webkit.org/260875@main - REGRESSION(260082@main): [GStreamer][1.20] YT broken
-* [ ] https://commits.webkit.org/260931@main - Non-unified build fixes, late February 2023 edition
+* [x] https://commits.webkit.org/260989@main - [GLib] Bump Safari version in user agent header
+* [x] https://commits.webkit.org/260973@main - [GTK] Updated Swedish translation
+* [x] https://commits.webkit.org/260949@main - [GLib] New API to get the request body of WebKitURISchemeRequest
+* [x] https://commits.webkit.org/260875@main - REGRESSION(260082@main): [GStreamer][1.20] YT broken
+* [x] https://commits.webkit.org/260931@main - Non-unified build fixes, late February 2023 edition
 * [x] https://commits.webkit.org/260818@main - [CMake] Rework decision to enable -gsplit-dwarf by default
 * [x] https://commits.webkit.org/260790@main - [Linux] DMABufObject modifiers should default to being not-present #10517
 * [x] https://commits.webkit.org/260584@main - LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
@@ -29,7 +29,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/260875@main REGRESSION(260082@main): [GStreamer][1.20] YT broken
+* [x] https://commits.webkit.org/260875@main REGRESSION(260082@main): [GStreamer][1.20] YT broken
 * [x] https://commits.webkit.org/259999@main [GLIB] always update the active uri of the frame
 * [x] https://commits.webkit.org/259434@main HTMLInputElement::setValueForUser should dispatch an input event
 * [x] https://commits.webkit.org/258293@main [GStreamer] ImageDecoder fixes
