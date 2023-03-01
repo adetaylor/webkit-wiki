@@ -11,13 +11,14 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [x] https://commits.webkit.org/261018@main - REGRESSION(260511@main): [GLib] Fix HSTS storage directory
 * [x] https://commits.webkit.org/261011@main - [GLib] Ensure no final classes have public class structs
 * [x] https://commits.webkit.org/261008@main - Add Cancel/Unknown/Clear Hardware Keycodes
 * [x] https://commits.webkit.org/261002@main - \[GTK]\[WPE] WebKitDownload destination should be a path instead of a URI
 * [x] https://commits.webkit.org/260989@main - [GLib] Bump Safari version in user agent header
 * [x] https://commits.webkit.org/260973@main - [GTK] Updated Swedish translation
 * [x] https://commits.webkit.org/260949@main - [GLib] New API to get the request body of WebKitURISchemeRequest
-* [x] https://commits.webkit.org/260875@main - REGRESSION(260082@main): [GStreamer][1.20] YT broken
+* [x] https://commits.webkit.org/260875@main - REGRESSION(260082@main): \[GStreamer]\[1.20] YT broken
 * [x] https://commits.webkit.org/260931@main - Non-unified build fixes, late February 2023 edition
 * [x] https://commits.webkit.org/260818@main - [CMake] Rework decision to enable -gsplit-dwarf by default
 * [x] https://commits.webkit.org/260790@main - [Linux] DMABufObject modifiers should default to being not-present #10517
