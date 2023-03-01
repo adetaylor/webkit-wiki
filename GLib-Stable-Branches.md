@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/261011@main - [GLib] Ensure no final classes have public class structs
 * [ ] https://commits.webkit.org/261002@main - [GTK][WPE] WebKitDownload destination should be a path instead of a URI
 * [x] https://commits.webkit.org/260989@main - [GLib] Bump Safari version in user agent header
 * [x] https://commits.webkit.org/260973@main - [GTK] Updated Swedish translation
