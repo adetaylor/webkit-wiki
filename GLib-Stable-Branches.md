@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/261118@main - [GLib] Need API for asynchronously handling WebKitDownload::decide-destination
 * [x] https://commits.webkit.org/261018@main - REGRESSION(260511@main): [GLib] Fix HSTS storage directory
 * [x] https://commits.webkit.org/261011@main - [GLib] Ensure no final classes have public class structs
 * [x] https://commits.webkit.org/261008@main - Add Cancel/Unknown/Clear Hardware Keycodes
