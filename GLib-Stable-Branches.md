@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://github.com/WebKit/WebKit/pull/11051 - [GTK] Update Korean translations - Mar 3, 2023
 * [ ] https://github.com/WebKit/WebKit/pull/11036 - TestFeatures.h:40:37: error: use of undeclared identifier 'uint32_t'
 * [ ] https://commits.webkit.org/261118@main - [GLib] Need API for asynchronously handling WebKitDownload::decide-destination
 * [x] https://commits.webkit.org/261018@main - REGRESSION(260511@main): [GLib] Fix HSTS storage directory
