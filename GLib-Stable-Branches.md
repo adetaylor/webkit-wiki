@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://github.com/WebKit/WebKit/pull/11122 - [GTK][l10n] Updated Polish translation of WebKitGTK for 2.40
 * [ ] https://commits.webkit.org/261228@main - [CoordinatedGraphics] Initialize WebCore::DisplayUpdate in ThreadedDisplayRefreshMonitor
 * [ ] https://commits.webkit.org/261199@main - [GTK] Update Korean translations - Mar 3, 2023
 * [ ] https://commits.webkit.org/261196@main - TestFeatures.h:40:37: error: use of undeclared identifier 'uint32_t'
