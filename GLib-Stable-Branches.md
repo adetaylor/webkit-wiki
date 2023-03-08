@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/261349@main - [GLib] Rename WebKitWebExtension to WebKitWebProcessExtension
 * [ ] https://commits.webkit.org/261320@main - [GLib] Remove WebKitJavascriptResult
 * [ ] https://commits.webkit.org/261280@main - [GTK][l10n] Updated Polish translation of WebKitGTK for 2.40
 * [ ] https://commits.webkit.org/261228@main - [CoordinatedGraphics] Initialize WebCore::DisplayUpdate in ThreadedDisplayRefreshMonitor
