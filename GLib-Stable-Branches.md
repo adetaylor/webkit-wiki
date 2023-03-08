@@ -14,7 +14,7 @@ performance, fix build issues, etc.
 * [ ] https://commits.webkit.org/261349@main - [GLib] Rename WebKitWebExtension to WebKitWebProcessExtension
 * [ ] https://commits.webkit.org/261320@main - [GLib] Remove WebKitJavascriptResult
 * [ ] https://commits.webkit.org/261280@main - [GTK][l10n] Updated Polish translation of WebKitGTK for 2.40
-* [ ] https://commits.webkit.org/261228@main - [CoordinatedGraphics] Initialize WebCore::DisplayUpdate in ThreadedDisplayRefreshMonitor
+* [x] https://commits.webkit.org/261228@main - [CoordinatedGraphics] Initialize WebCore::DisplayUpdate in ThreadedDisplayRefreshMonitor
 * [ ] https://commits.webkit.org/261199@main - [GTK] Update Korean translations - Mar 3, 2023
 * [ ] https://commits.webkit.org/261196@main - TestFeatures.h:40:37: error: use of undeclared identifier 'uint32_t'
 * [ ] https://commits.webkit.org/261118@main - [GLib] Need API for asynchronously handling WebKitDownload::decide-destination
