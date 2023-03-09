@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/261432@main - [GTK] [l10n] Updated Turkish translation of WebKitGTK
 * [x] https://commits.webkit.org/261349@main - [GLib] Rename WebKitWebExtension to WebKitWebProcessExtension
 * [x] https://commits.webkit.org/261320@main - [GLib] Remove WebKitJavascriptResult
 * [x] https://commits.webkit.org/261280@main - [GTK][l10n] Updated Polish translation of WebKitGTK for 2.40
