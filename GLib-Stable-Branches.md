@@ -11,7 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://github.com/WebKit/WebKit/pull/11664 - REGRESSION(261320@main): [GLib] Broke WebKitUserContentManager::script-message-received
+* [ ] https://commits.webkit.org/261810@main - REGRESSION(261320@main): [GLib] Broke WebKitUserContentManager::script-message-received
 * [x] https://commits.webkit.org/261474@main - REGRESSION(261349@main): [GLib] Problems with installed headers
 * [x] https://commits.webkit.org/261433@main - [GLib] Warning on WebKitNetworkSession documentation; old API version should not build migration docs for new API version
 * [x] https://commits.webkit.org/261432@main - [GTK] [l10n] Updated Turkish translation of WebKitGTK
