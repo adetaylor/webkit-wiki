@@ -12,6 +12,12 @@ performance, fix build issues, etc.
 ## Proposed merges
 
 * [ ] https://commits.webkit.org/261810@main - REGRESSION(261320@main): [GLib] Broke WebKitUserContentManager::script-message-received
+* [ ] https://commits.webkit.org/260572@main - [JSC] Fix new BBQ's address materialization
+* [ ] https://commits.webkit.org/260597@main - [JSC] Some misc cleanup in new BBQ
+* [ ] https://commits.webkit.org/260700@main - [JSC] Fix SIMD in new BBQ
+* [ ] https://commits.webkit.org/261048@main - [JSC] x64 CCall returnValueGPR is not in m_validGPRs
+* [ ] https://commits.webkit.org/261060@main - [JSC] Remove m_dataScratch register in WasmBBQJIT
+* [ ] https://commits.webkit.org/261498@main - Unreviewed build fixes for RISCV64
 * [x] https://commits.webkit.org/261474@main - REGRESSION(261349@main): [GLib] Problems with installed headers
 * [x] https://commits.webkit.org/261433@main - [GLib] Warning on WebKitNetworkSession documentation; old API version should not build migration docs for new API version
 * [x] https://commits.webkit.org/261432@main - [GTK] [l10n] Updated Turkish translation of WebKitGTK
