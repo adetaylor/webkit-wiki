@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://github.com/WebKit/WebKit/pull/11696 - [GLib] No render update when seeking outside of network buffer in fullscreen
 * [ ] https://commits.webkit.org/261810@main - REGRESSION(261320@main): [GLib] Broke WebKitUserContentManager::script-message-received
 * [ ] https://commits.webkit.org/260572@main - [JSC] Fix new BBQ's address materialization
 * [ ] https://commits.webkit.org/260597@main - [JSC] Some misc cleanup in new BBQ
