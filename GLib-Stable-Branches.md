@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/261635@main - [GStreamer] Unmute doesn't work
 * [ ] https://commits.webkit.org/261961@main - [GTK] Slow scroll adjustment when using a mouse wheel
 * [ ] https://commits.webkit.org/261956@main - [GLib] webkit_user_content_manager_register_script_message_handler() world_name parameter should be nullable
 * [ ] https://commits.webkit.org/261839@main - [GLib] No render update when seeking outside of network buffer in fullscreen
