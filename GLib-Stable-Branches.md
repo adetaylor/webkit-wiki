@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://github.com/WebKit/WebKit/pull/12191 - Fix build with GCC 13 -Werror
 * [ ] https://commits.webkit.org/262163@main - Fallback to elogind when systemd is unavailable at build time
 * [ ] https://commits.webkit.org/261961@main - [GTK] Slow scroll adjustment when using a mouse wheel
 * [ ] https://commits.webkit.org/261956@main - [GLib] webkit_user_content_manager_register_script_message_handler() world_name parameter should be nullable
