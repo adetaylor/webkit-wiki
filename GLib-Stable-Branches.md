@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://github.com/WebKit/WebKit/pull/12965 - [GTK] Build fix for Debian Stable after 263061@main
 * [x] https://commits.webkit.org/262434@main - Fix build of SourceBrush.cpp
 * [x] https://commits.webkit.org/262664@main - Fix build with GCC 13 -Werror
 * [x] https://commits.webkit.org/262163@main - Fallback to elogind when systemd is unavailable at build time
