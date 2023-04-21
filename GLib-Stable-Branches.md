@@ -11,7 +11,9 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://github.com/WebKit/WebKit/pull/12965 - [GTK] Build fix for Debian Stable after 263061@main
+* [ ] https://commits.webkit.org/263176@main - [GTK] Build fix for Debian Stable after 263061@main
+* [ ] https://commits.webkit.org/263085@main - Images are not drawn even after they are completely loaded from a slow server
+  - [ ] https://commits.webkit.org/261700@main - [GPU Process] Have one copy of NativeImage when it is shared between WebProcess and GPUProcess
 * [x] https://commits.webkit.org/262434@main - Fix build of SourceBrush.cpp
 * [x] https://commits.webkit.org/262664@main - Fix build with GCC 13 -Werror
 * [x] https://commits.webkit.org/262163@main - Fallback to elogind when systemd is unavailable at build time
