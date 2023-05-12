@@ -49,6 +49,9 @@ performance, fix build issues, etc.
 * [x] https://commits.webkit.org/260818@main - [CMake] Rework decision to enable -gsplit-dwarf by default
 * [x] https://commits.webkit.org/260790@main - [Linux] DMABufObject modifiers should default to being not-present #10517
 * [x] https://commits.webkit.org/260584@main - LLIntAssembly.h:38532:23: error: ‘g_superSamplerCount’ was not declared in this scope
+* [ ] https://commits.webkit.org/261629@main - [GStreamer][MSE] Version check for a GStreamer bug fixed in 1.20.6
+* [ ] https://commits.webkit.org/261635@main - [GStreamer] Unmute doesn't work
+* [ ] https://commits.webkit.org/263791@main - [GStreamer][MSE] Decoder sometimes receives caps event before stream-start
 
 # 2.38
 
