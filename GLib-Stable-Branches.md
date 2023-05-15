@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://github.com/WebKit/WebKit/pull/13855 - REGRESSION(262138@main): [GStreamer] Broke video rendering when GL is disabled
 * [x] https://commits.webkit.org/264017@main - [GStreamer] Constant CPU usage on autoplaying videos, even when out of viewport
 * [ ] https://commits.webkit.org/263921@main - [GStreamer] video.loop cannot reliably be set on a paused pipeline
 * [ ] https://commits.webkit.org/263860@main - [GStreamer] Looped video is not seamless (flicker inbetween loops)
