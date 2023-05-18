@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/264193@main - [GStreamer] Audio sinks created by media players leak
 * [ ] https://commits.webkit.org/264198@main - [GLib] Remove obsolete documentation from WebKitWebsiteDataManager
 * [ ] https://commits.webkit.org/264064@main - REGRESSION(262138@main): [GStreamer] Broke video rendering when GL is disabled
 * [x] https://commits.webkit.org/264017@main - [GStreamer] Constant CPU usage on autoplaying videos, even when out of viewport
