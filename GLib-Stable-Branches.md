@@ -17,7 +17,7 @@ performance, fix build issues, etc.
 * [x] https://commits.webkit.org/264017@main - [GStreamer] Constant CPU usage on autoplaying videos, even when out of viewport
 * [ ] https://commits.webkit.org/263921@main - [GStreamer] video.loop cannot reliably be set on a paused pipeline
 * [ ] https://commits.webkit.org/263860@main - [GStreamer] Looped video is not seamless (flicker inbetween loops)
-* [ ] https://commits.webkit.org/263791@main - [GStreamer]\[MSE] Decoder sometimes receives caps event before stream-start
+* [ ] ~~https://commits.webkit.org/263791@main - [GStreamer]\[MSE] Decoder sometimes receives caps event before stream-start~~ depends on [263585@main](https://commits.webkit.org/263585@main) which has many conflicts
 * [x] https://commits.webkit.org/263134@main - [GStreamer] Critical warnings when browsing cnn.com
 * [x] https://commits.webkit.org/262066@main - [GStreamer] Harness: Support for output stream caps changes
 * [x] https://commits.webkit.org/261635@main - [GStreamer] Unmute doesn't work
