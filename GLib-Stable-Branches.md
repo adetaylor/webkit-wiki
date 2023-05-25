@@ -11,12 +11,12 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/264193@main - [GStreamer] Audio sinks created by media players leak
-* [ ] https://commits.webkit.org/264198@main - [GLib] Remove obsolete documentation from WebKitWebsiteDataManager
-* [ ] https://commits.webkit.org/264064@main - REGRESSION(262138@main): [GStreamer] Broke video rendering when GL is disabled
+* [x] https://commits.webkit.org/264193@main - [GStreamer] Audio sinks created by media players leak
+* [x] https://commits.webkit.org/264198@main - [GLib] Remove obsolete documentation from WebKitWebsiteDataManager
+* [x] https://commits.webkit.org/264064@main - REGRESSION(262138@main): [GStreamer] Broke video rendering when GL is disabled
 * [x] https://commits.webkit.org/264017@main - [GStreamer] Constant CPU usage on autoplaying videos, even when out of viewport
-* [ ] https://commits.webkit.org/263921@main - [GStreamer] video.loop cannot reliably be set on a paused pipeline
-* [ ] https://commits.webkit.org/263860@main - [GStreamer] Looped video is not seamless (flicker inbetween loops)
+* [x] https://commits.webkit.org/263921@main - [GStreamer] video.loop cannot reliably be set on a paused pipeline
+* [x] https://commits.webkit.org/263860@main - [GStreamer] Looped video is not seamless (flicker inbetween loops)
 * [ ] ~~https://commits.webkit.org/263791@main - [GStreamer]\[MSE] Decoder sometimes receives caps event before stream-start~~ depends on [263585@main](https://commits.webkit.org/263585@main) which has many conflicts
 * [x] https://commits.webkit.org/263134@main - [GStreamer] Critical warnings when browsing cnn.com
 * [x] https://commits.webkit.org/262066@main - [GStreamer] Harness: Support for output stream caps changes
