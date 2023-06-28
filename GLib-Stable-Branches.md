@@ -11,8 +11,8 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-* [ ] https://commits.webkit.org/265527@main - MemoryPressureMonitor (cgroupV1) honors memory.memsw.usage_in_bytes if exist
-* [ ] https://commits.webkit.org/262970@main - [WPE] Do not skip generic touch event handling for axis event gesturing
+* [x] https://commits.webkit.org/265527@main - MemoryPressureMonitor (cgroupV1) honors memory.memsw.usage_in_bytes if exist
+* [ ] ~~https://commits.webkit.org/262970@main - [WPE] Do not skip generic touch event handling for axis event gesturing~~
 * [x] https://commits.webkit.org/264193@main - [GStreamer] Audio sinks created by media players leak
 * [x] https://commits.webkit.org/264198@main - [GLib] Remove obsolete documentation from WebKitWebsiteDataManager
 * [x] https://commits.webkit.org/264064@main - REGRESSION(262138@main): [GStreamer] Broke video rendering when GL is disabled
