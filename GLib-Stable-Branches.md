@@ -2,6 +2,15 @@ This is the page for handling WebKitGTK and WPEWebKit stable branches.
 We should merge not overly intrusive patches that improve stability or
 performance, fix build issues, etc.
 
+# 2.42
+
+## Information
+
+* Branch: https://github.com/WebKit/WebKit/commits/webkitglib/2.42
+* Branch point: [266719@main](https://commits.webkit.org/266719@main)
+
+## Proposed merges
+
 # 2.40
 
 ## Information
