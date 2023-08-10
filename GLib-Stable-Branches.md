@@ -135,3 +135,7 @@ performance, fix build issues, etc.
 * [X] https://commits.webkit.org/253605@main Assertion failure when using evaluated empty catch block
 * [x] https://commits.webkit.org/254213@main Revert 252943@main for causing constant flickering on aa.com
 * [x] https://commits.webkit.org/254237@main [GTK4] UI process hang when opening HTML select elements (combo boxes)
+
+# 2.36 and older
+
+The data for that releases is in the old Trac WiKi at https://trac.webkit.org/wiki/WebKitGTK/StableRelease#Listofreleases
