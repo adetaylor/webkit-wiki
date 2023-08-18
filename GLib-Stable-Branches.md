@@ -11,6 +11,8 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [ ] https://commits.webkit.org/267038@main - [GLib] Process launching hangs if xdg-dbus-proxy is not installed
+
 # 2.40
 
 ## Information
