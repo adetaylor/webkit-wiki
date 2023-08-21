@@ -18,6 +18,8 @@ In general, you should use some form of smart pointer for:
 
 So **what is** a *dangerous* use of references and pointers you may ask? It’s any use that we can’t trivially conclude that it doesn’t lead to a use-after-free.
 
+For now, we don’t detect dangerous use of non-ref counted objects including ones that can vend WeakPtr. It’s on us, humans, to decide which objects need to be ref counted or need to be CanMakeWeakPtr.
+
 Consider the following example. This code may lead to a use-after-free of “parent” in the third line because the code doesn’t keep the parent alive. Because `updateLayout` can execute arbitrary script execution, it may remove the parent node from the document so that the parent is no longer alive by the time third line is executed.
 
 ```cpp
