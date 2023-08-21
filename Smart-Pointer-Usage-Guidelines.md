@@ -102,3 +102,75 @@ void HTMLMediaElement::didMoveToNewDocument(Document& oldDocument, Document& new
         m_downloadManager.downloadFinished(*this);
     };
 ```
+
+(5) is about ensuring safety of local variables. We allow use of a raw pointer or a reference but only if its embedding scope contains an equivalent Ref or RefPtr. In the following code, cssValueList is a raw pointer but it has an alias cssValue which is a RefPtr so we allow it.
+
+```cpp
+static Vector<String> authoredGridTrackSizes(Node* node, GridTrackSizingDirection direction, unsigned expectedTrackCount)
+{
+    auto* element = dynamicDowncast<StyledElement>(node);
+    if (!element)
+        return { };
+
+    auto directionCSSPropertyID = direction == GridTrackSizingDirection::ForColumns ? CSSPropertyID::CSSPropertyGridTemplateColumns : CSSPropertyID::CSSPropertyGridTemplateRows;
+    RefPtr<CSSValue> cssValue;
+    if (auto* inlineStyle = element->inlineStyle())
+        cssValue = inlineStyle->getPropertyCSSValue(directionCSSPropertyID);
+
+    if (!cssValue) {
+        auto styleRules = element->styleResolver().styleRulesForElement(element);
+        styleRules.reverse();
+        for (auto styleRule : styleRules) {
+            ASSERT(styleRule);
+            if (!styleRule)
+                continue;
+            cssValue = styleRule->properties().getPropertyCSSValue(directionCSSPropertyID);
+            if (cssValue)
+                break;
+        }
+    }
+
+    auto* cssValueList = dynamicDowncast<CSSValueList>(cssValue.get());
+    if (!cssValueList)
+        return { };
+```
+
+On the other hand, here is an example of unsafe use of raw pointers:
+
+```cpp
+if (auto* srcList = downcast<CSSValueList>(m_fontFaceRule->properties().getPropertyCSSValue(CSSPropertySrc).get())) {
+    for (auto& item : *srcList)
+        downcast<CSSFontFaceSrcLocalValue>(const_cast<CSSValue&>(item)).setSVGFontFaceElement(*this);
+}
+```
+
+Here, we're we’re storing the result of getPropertyCSSValue as CSSValueList*. But if setSVGFontFaceEleme was a non-trivial function that could mutate the said property or its value, we may end up having a use-after-free bug. The solution is to deploy RefPtr instead as follows:
+
+```cpp
+if (auto* srcList = downcast<CSSValueList>(m_fontFaceRule->properties().getPropertyCSSValue(CSSPropertySrc).get())) {
+    for (auto& item : *srcList)
+        downcast<CSSFontFaceSrcLocalValue>(const_cast<CSSValue&>(item)).setSVGFontFaceElement(*this);
+}
+```
+
+## When to Use Which Smart Pointer
+
+WebKit supports a number of smart pointers with their own preconditions to use them:
+
+* `RefPtr` / `Ref` - Object must implement `ref()` and `deref()` functions whereby last call to `deref()` will delete this. Typically accomplished by inheriting from `RefCounted<T>`.
+* `WeakPtr` - Object must inherit from `CanMakeWeakPtr<T>`.
+* `ThreadSafeWeakPtr` - Object must inherit from `ThreadSafeRefCountedAndCanMakeThreadSafeWeakPtr<T>`.
+* `CheckedPtr` / `CheckedRef` - Object must `incrementPtrCount` and `decrementPtrCount` with semantics so that the destructor will release assert that `decrementPtrCount` has been called as many times as `incrementPtrCount`. Typically accomplished by inheriting from `CanMakeCheckedPtr`.
+
+Each smart pointer type is catered towards specific use cases in mind.
+
+### Shared Ownership with `Ref` and `RefPtr`
+`RefPtr` and `Ref` are useful when there could be multiple owners for a given object, or multiple heap allocated objects need to keep the object alive. RefCounted and ThreadSafeRefCounted, or alternatively any class which implements the semantics of `ref()` and `deref()` can be used to implement an object which supports RefPtr and Ref. There is no `ThreadSafeRefPtr` or `ThreadSafeRef`. Regular RefPtr and Ref are thread safe as long as `ref()` and `deref()` are thread safe (e.g. uses `ThreadSafeRefCounted`).
+
+### Weak Relationship with `WeakPtr` and `ThreadSafeWeakPtr`
+`WeakPtr` (single threaded) and `ThreadSafeWeakPtr` (concurrency safe) are useful when an object needs to be referenced by some other object but without keeping the object alive. Instead, it would automatically start returning nullptr when the object it points to has been destroyed. An object which inherits from `CanMakeWeakPtr` and `ThreadSafeRefCountedAndCanMakeThreadSafeWeakPtr`, respectively, support these pointers. Note that thread safety is built into pointer types themselves unlike `Ref` and `RefPtr`. In addition, any object which inherits from `ThreadSafeRefCountedAndCanMakeThreadSafeWeakPtr` supports Ref and RefPtr as well as `ThreadSafeWeakPtr`.
+
+### Cheaper Weak Relationship with CheckedPtr and CheckedRef
+Whilst `WeakPtr` and `ThreadSafeWeakPtr` are preferred way of establishing a weak relationship between objects, it has both runtime cost (one extra indirect load) and memory (allocates one `WeakPtrImplBase` object). When these runtime costs are not permissible or semantics of reference is desirable (i.e. the value of it should never be nullptr in normal circumstances), then `CheckedPtr` and `CheckedRef` provide a viable alternative. These smart pointers act a lot like `RefPtr` and `Ref` and call `incrementPtrCount()` and `decrementPtrCount()` on the object it points to but it doesn’t extend the lifetime of the object. Instead, when the object is about to get destroyed, its destructor will release assert that there are not outstanding `CheckedPtr` and `CheckedRef` left, thus preventing the use of freed memory region down the line.
+
+One drawback of `CheckedPtr` and CheckedRef is that each user is responsible for clearing its values before the object gets destroyed, and if and when the release assert fails, it doesn’t provide any backtrace or other information regarding which client still has an outstanding instance of `CheckedPtr` and `CheckedRef`. We must audit all uses of `CheckedPtr` and `CheckedRef` to find out which ones are violating the contract. Like `RefPtr` and `Ref`, `CheckedPtr` and `CheckedRef` are thread safe as long as `incrementPtrCount()` and `decrementPtrCount()` are thread safe (e.g. uses `CanMakeThreadSafeCheckedPtr`).
