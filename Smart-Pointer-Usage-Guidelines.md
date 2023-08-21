@@ -91,7 +91,39 @@ void HTMLMediaElement::didMoveToNewDocument(Document& oldDocument, Document& new
 }
 ```
 
-(4) can considered as generalization for (3) for lambda captured variables. In the following example, `this` object can be deleted between the time this lambda function is created and called. To avoid use-after-free of `this`, we need to store it using `Ref`, `RefPtr`, `CheckedRef`, `CheckedPtr`, or `WeakPtr` instead:
+For (4), capturing a ref counted object as a raw pointer or a reference, the tool may generate a warning like this:
+```
+Source/WebKit/UIProcess/API/APIHTTPCookieStore.cpp:115:74: warning: [WebKit] captured a raw pointer to a ref-countable type [-Wlambda-capture-ptr-to-refcntbl]
+    cookieManager->deleteCookie(m_owningDataStore->sessionID(), cookie, [pool = WTFMove(pool), completionHandler = WTFMove(completionHandler)]() mutable {
+```
+
+This is warning about `webPage` object getting captured using a raw reference in the following function:
+
+```cpp
+void HTTPCookieStore::deleteCookie(const WebCore::Cookie& cookie, CompletionHandler<void()>&& completionHandler)
+{
+    auto* pool = m_owningDataStore->processPoolForCookieStorageOperations();
+    if (!pool) {
+        if (m_owningDataStore->sessionID() == PAL::SessionID::defaultSessionID() && !cookie.session)
+            deleteCookieFromDefaultUIProcessCookieStore(cookie);
+        else
+            m_owningDataStore->removePendingCookie(cookie);
+
+        RunLoop::main().dispatch([completionHandler = WTFMove(completionHandler)] () mutable {
+            completionHandler();
+        });
+        return;
+    }
+
+    auto* cookieManager = pool->supplement<WebKit::WebCookieManagerProxy>();
+    cookieManager->deleteCookie(m_owningDataStore->sessionID(), cookie, [pool = WTFMove(pool), completionHandler = WTFMove(completionHandler)]() mutable {
+        completionHandler();
+    });
+}
+```
+Here, we should have stored WebProcessPool using `Ref`, `RefPtr`, `CheckedRef`, `CheckedPtr`, or `WeakPtr` instead
+
+In the following example, `this` object can be deleted between the time this lambda function is created and called. To avoid use-after-free of `this`, we need to store it using `Ref`, `RefPtr`, `CheckedRef`, `CheckedPtr`, or `WeakPtr` instead:
 
 ```cpp
     auto completionHandlerWrapper = [this, completionHandler = WTFMove(completionHandler)] (const IPC::DataReference& resumeData) mutable {
