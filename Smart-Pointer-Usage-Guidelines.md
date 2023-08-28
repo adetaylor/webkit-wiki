@@ -54,7 +54,7 @@ struct B : public A {
 };
 ```
 
-To understand (3), examine the following code, in which, `setForm` is called with the result of `findAssociatedForm`, which returns HTMLFormElement* without storing it in a `Ref` or `RefPtr`. If `setForm` can somehow cause `HTMLFormElement` to be deleted before completing its work, then this can result in a use-after-free within setForm.
+To understand (3), examine the following code, in which, `setForm` is called with the result of `findAssociatedForm`, which returns `HTMLFormElement*` without storing it in a `Ref` or `RefPtr`. If `setForm` can somehow cause `HTMLFormElement` to be deleted before completing its work, then this can result in a use-after-free within setForm.
 
 ```cpp
 void FormAssociatedElement::resetFormOwner()
