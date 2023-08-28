@@ -178,7 +178,7 @@ if (auto* srcList = downcast<CSSValueList>(m_fontFaceRule->properties().getPrope
 }
 ```
 
-Here, we're we’re storing the result of getPropertyCSSValue as CSSValueList*. But if setSVGFontFaceEleme was a non-trivial function that could mutate the said property or its value, we may end up having a use-after-free bug. The solution is to deploy RefPtr instead as follows:
+Here, we're we’re storing the result of getPropertyCSSValue as CSSValueList*. But if setSVGFontFaceElement was a non-trivial function that could mutate the said property or its value, we may end up having a use-after-free bug. The solution is to deploy RefPtr instead as follows:
 
 ```cpp
 if (auto* srcList = downcast<CSSValueList>(m_fontFaceRule->properties().getPropertyCSSValue(CSSPropertySrc).get())) {
