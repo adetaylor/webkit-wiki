@@ -84,6 +84,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+* [ ] https://commits.webkit.org/265527@main - MemoryPressureMonitor (cgroupV1) honors memory.memsw.usage_in_bytes if exist
 * [x] https://commits.webkit.org/260875@main REGRESSION(260082@main): [GStreamer][1.20] YT broken
 * [x] https://commits.webkit.org/259999@main [GLIB] always update the active uri of the frame
 * [x] https://commits.webkit.org/259434@main HTMLInputElement::setValueForUser should dispatch an input event
