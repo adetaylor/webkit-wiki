@@ -11,9 +11,9 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
- * [ ] https://commits.webkit.org/267038@main - [GLib] Process launching hangs if xdg-dbus-proxy is not installed
- * [ ] https://commits.webkit.org/267070@main - [GTK][WPE] Pass GBM_BO_USE_RENDERING to gbm_bo_create
- * [ ] https://commits.webkit.org/267560@main - [JSC] Unreviewed RISCV64 build fix
+ * [x] https://commits.webkit.org/267038@main - [GLib] Process launching hangs if xdg-dbus-proxy is not installed
+ * [x] https://commits.webkit.org/267070@main - [GTK][WPE] Pass GBM_BO_USE_RENDERING to gbm_bo_create
+ * [x] https://commits.webkit.org/267560@main - [JSC] Unreviewed RISCV64 build fix
 
 # 2.40
 
