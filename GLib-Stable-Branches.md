@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [ ] https://commits.webkit.org/268137@main - GLContextX11.cpp:89:66: error: invalid cast from type 'long unsigned int' to type 'EGLNativePixmapType' {aka 'unsigned int'}
  * [x] https://commits.webkit.org/267995@main - Updated Swedish translation
  * [x] https://commits.webkit.org/267038@main - [GLib] Process launching hangs if xdg-dbus-proxy is not installed
  * [x] https://commits.webkit.org/267070@main - [GTK][WPE] Pass GBM_BO_USE_RENDERING to gbm_bo_create
