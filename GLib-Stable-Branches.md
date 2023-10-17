@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [ ] https://commits.webkit.org/269223@main - Element application crashes in WebCore::Path::isEmpty()
  * [ ] https://commits.webkit.org/269169@main - [WPE][GTK] Bump Safari version in user agent header
  * [x] https://commits.webkit.org/268142@main - [GTK][WPE] Use enable-html5-database runtime flag to control IndexedDB API
  * [x] https://commits.webkit.org/268137@main - GLContextX11.cpp:89:66: error: invalid cast from type 'long unsigned int' to type 'EGLNativePixmapType' {aka 'unsigned int'}
