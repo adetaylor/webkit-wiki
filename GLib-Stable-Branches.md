@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [ ] https://commits.webkit.org/265870.537@safari-7616-branch - Security hardening for SincResampler
  * [ ] https://commits.webkit.org/270274@main - REGRESSION([266247@main](https://commits.webkit.org/266247@main)): PDF "Save" button does nothing, "Print" function also broken
  * [x] https://commits.webkit.org/269255@main - Unable to scroll results.webkit.org results using the scrollbars
  * [x] https://commits.webkit.org/269223@main - Element application crashes in WebCore::Path::isEmpty()
