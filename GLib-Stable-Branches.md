@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [ ] https://commits.webkit.org/270977@main - Build fails with libxml2 version 2.12.0 due to API change
  * [x] https://commits.webkit.org/265870.537@safari-7616-branch - Security hardening for SincResampler
  * [x] https://commits.webkit.org/270274@main - REGRESSION([266247@main](https://commits.webkit.org/266247@main)): PDF "Save" button does nothing, "Print" function also broken
  * [x] https://commits.webkit.org/269255@main - Unable to scroll results.webkit.org results using the scrollbars
