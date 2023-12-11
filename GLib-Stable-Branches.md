@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [x] https://commits.webkit.org/271864@main - [GStreamer] HTTP source element leaks
  * [x] https://commits.webkit.org/266809@main - Revert Resizing video on YouTube can result in aliasing
  * [x] https://commits.webkit.org/271007@main - [FreeType] Do not special case the "sans" font family name
  * [x] https://commits.webkit.org/270977@main - Build fails with libxml2 version 2.12.0 due to API change
