@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [x] https://commits.webkit.org/272009@main - [GTK][WPE] Random incorrect image displayed as the background of a div
  * [x] https://commits.webkit.org/271861@main - [GStreamer] Misc leak fixes
  * [x] https://commits.webkit.org/271864@main - [GStreamer] HTTP source element leaks
  * [x] https://commits.webkit.org/266809@main - Revert Resizing video on YouTube can result in aliasing
