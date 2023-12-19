@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+ * [ ] https://commits.webkit.org/272287@main - [TextureMapper] right side of for-loop condition must be constant for ES SL 1.0
  * [x] https://commits.webkit.org/272009@main - [GTK][WPE] Random incorrect image displayed as the background of a div
  * [x] https://commits.webkit.org/271861@main - [GStreamer] Misc leak fixes
  * [x] https://commits.webkit.org/271864@main - [GStreamer] HTTP source element leaks
