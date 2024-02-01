@@ -229,3 +229,53 @@ private:
 #include "MyClass.h"
 void MyClass::doFoo() { foo(); }
 ```
+
+### Avoid Default Parameters
+
+Default parameters for non-built-in types usually require including in the full declaration for those types into the header declaring the function which takes that type. This is because the caller must have the full definition of that type at the call site. Instead, overloading can be used to provide the same mechanic at the call site without requiring the caller to have access to the parameter type definition, allowing the parameter type to be forward-declared by that header.
+
+E.g.:
+``` cpp
+// ParameterType.h
+enum class EnumParameter : bool {
+    Bad,
+    Good,
+};
+
+struct StructParameter {
+    StructParameter(int value) : m_value(value) { }
+    int m_value { 0 };
+};
+```
+
+Bad:
+``` cpp
+// MyClass.h
+#include "ParameterType.h"
+class MyClass {
+private:
+    void doEnum(EnumParameter = EnumParameter::Good);
+    void doStruct(StructParameter&& = StructParameter { 1 });
+};
+```
+
+Good:
+``` cpp
+// MyClass.h
+enum class EnumParameter : bool;
+struct StructParameter;
+
+class MyClass {
+private:
+    void doEnum();
+    void doEnum(EnumParameter);
+    void doStruct();
+    void doStruct(StructParameter&&);
+};
+
+// MyClass.cpp
+#include "MyClass.h"
+void MyClass::doEnum() { doEnum(EnumParameter::Good); }
+void MyClass::doStruct() { doStruct(StructParameter { 1 }); }
+```
+
