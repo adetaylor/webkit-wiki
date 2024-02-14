@@ -2,6 +2,12 @@ This is the page for handling WebKitGTK and WPEWebKit stable branches.
 We should merge not overly intrusive patches that improve stability or
 performance, fix build issues, etc.
 
+# 2.44
+
+## Proposed merges
+
+  * [ ] https://commits.webkit.org/274475@main - [GLib] Enable WebCodecs
+
 # 2.42
 
 ## Information
