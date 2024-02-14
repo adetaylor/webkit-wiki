@@ -4,6 +4,11 @@ performance, fix build issues, etc.
 
 # 2.44
 
+## Information
+
+* Branch: https://github.com/WebKit/WebKit/commits/webkitglib/2.44
+* Branch point: [274313@main](https://commits.webkit.org/274313@main) ???
+
 ## Proposed merges
 
   * [ ] https://commits.webkit.org/274475@main - [GLib] Enable WebCodecs
