@@ -11,6 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
+  * [ ] https://commits.webkit.org/275168@main - [Nicosia] Add support for translate/rotate/scale animations
   * [ ] https://commits.webkit.org/274475@main - [GLib] Enable WebCodecs
   * [ ] https://commits.webkit.org/275063@main - Web process cache should expire old web processes sooner
 
