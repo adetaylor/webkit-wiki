@@ -14,8 +14,8 @@ performance, fix build issues, etc.
   * [x] https://commits.webkit.org/275168@main - [Nicosia] Add support for translate/rotate/scale animations
   * [x] https://commits.webkit.org/274475@main - [GLib] Enable WebCodecs
   * [x] https://commits.webkit.org/275063@main - Web process cache should expire old web processes sooner
-  * [ ] https://commits.webkit.org/275032@main - [GStreamer] Crash after 10 seconds on watchdog thread do to loop when destroying ~ImageDecoderGStreamerSample
-  * [ ] https://commits.webkit.org/275835@main - Atlassian Confluence blocks Epiphany's user agent
+  * [x] https://commits.webkit.org/275032@main - [GStreamer] Crash after 10 seconds on watchdog thread do to loop when destroying ~ImageDecoderGStreamerSample
+  * [x] https://commits.webkit.org/275835@main - Atlassian Confluence blocks Epiphany's user agent
 
 # 2.42
 
