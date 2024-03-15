@@ -11,9 +11,9 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-  * [ ] https://commits.webkit.org/275934@main - [Clang] GeneratedSerializers.cpp(3716,11): error: offset of on non-standard-layout type 'WebKit::AudioTrackPrivateRemoteConfiguration' [-Werror,-Winvalid-offsetof]
-  * [ ] https://commits.webkit.org/275926@main - [JSC] DatePrototype.cpp(337,29): error: 'snprintf' will always be truncated; specified size is 28, but format string expands to at least 29 [-Werror,-Wformat-truncation]
-  * [ ] https://commits.webkit.org/276012@main and https://commits.webkit.org/276019@main - [WPE][GTK] Warning: WebKit2: Couldn't find 'run_async_javascript_function_in_world_finish' for the corresponding async function: 'run_async_javascript_function_in_world'
+  * [x] https://commits.webkit.org/275934@main - [Clang] GeneratedSerializers.cpp(3716,11): error: offset of on non-standard-layout type 'WebKit::AudioTrackPrivateRemoteConfiguration' [-Werror,-Winvalid-offsetof]
+  * [x] https://commits.webkit.org/275926@main - [JSC] DatePrototype.cpp(337,29): error: 'snprintf' will always be truncated; specified size is 28, but format string expands to at least 29 [-Werror,-Wformat-truncation]
+  * [x] https://commits.webkit.org/276012@main and https://commits.webkit.org/276019@main - [WPE][GTK] Warning: WebKit2: Couldn't find 'run_async_javascript_function_in_world_finish' for the corresponding async function: 'run_async_javascript_function_in_world'
   * [x] https://commits.webkit.org/275168@main - [Nicosia] Add support for translate/rotate/scale animations
   * [x] https://commits.webkit.org/274475@main - [GLib] Enable WebCodecs
   * [x] https://commits.webkit.org/275063@main - Web process cache should expire old web processes sooner
