@@ -7,7 +7,7 @@ performance, fix build issues, etc.
 ## Information
 
 * Branch: https://github.com/WebKit/WebKit/commits/webkitglib/2.44
-* Branch point: [274313@main](https://commits.webkit.org/274313@main) ???
+* Branch point: [274313@main](https://commits.webkit.org/274313@main)
 
 ## Proposed merges
 
