@@ -11,7 +11,7 @@ performance, fix build issues, etc.
 
 ## Proposed merges
 
-  * [ ] https://commits.webkit.org/276282@main - REGRESSION([274077@main](https://commits.webkit.org/274077@main)): failure to build on i586 (and likely other 32bit arches): static assertion failed: Timer should stay small
+  * [x] https://commits.webkit.org/276282@main - REGRESSION([274077@main](https://commits.webkit.org/274077@main)): failure to build on i586 (and likely other 32bit arches): static assertion failed: Timer should stay small
   * [x] https://commits.webkit.org/275934@main - [Clang] GeneratedSerializers.cpp(3716,11): error: offset of on non-standard-layout type 'WebKit::AudioTrackPrivateRemoteConfiguration' [-Werror,-Winvalid-offsetof]
   * [x] https://commits.webkit.org/275926@main - [JSC] DatePrototype.cpp(337,29): error: 'snprintf' will always be truncated; specified size is 28, but format string expands to at least 29 [-Werror,-Wformat-truncation]
   * [x] https://commits.webkit.org/276012@main and https://commits.webkit.org/276019@main - [WPE][GTK] Warning: WebKit2: Couldn't find 'run_async_javascript_function_in_world_finish' for the corresponding async function: 'run_async_javascript_function_in_world'
