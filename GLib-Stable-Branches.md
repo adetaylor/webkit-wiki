@@ -1,6 +1,6 @@
-This is the page for handling WebKitGTK and WPEWebKit stable branches.
-We should merge not overly intrusive patches that improve stability or
-performance, fix build issues, etc.
+This is the page for handling WebKitGTK and WPE WebKit stable branches. We should merge nonintrusive patches that improve stability or performance, fix bugs or build issues, etc.
+
+To suggest that a merge request be backported to the current stable branch, apply the label [GLib Suggested Backport](https://github.com/WebKit/WebKit/pulls?q=label%3A%22GLib+Suggested+Backport%22). Stable branch maintainers should remove this label after completing the backport.
 
 # 2.44
 
@@ -9,7 +9,9 @@ performance, fix build issues, etc.
 * Branch: https://github.com/WebKit/WebKit/commits/webkitglib/2.44
 * Branch point: [274313@main](https://commits.webkit.org/274313@main)
 
-## Proposed merges
+## Previous proposed merges
+
+Instead of adding more items here, instead apply the label [GLib Suggested Backport](https://github.com/WebKit/WebKit/pulls?q=label%3A%22GLib+Suggested+Backport%22) to desired merge request.
 
   * [ ] https://commits.webkit.org/276608@main - [GTK] Reproducible crash on invalid web process message DrawingArea_CommitTransientZoom
   * [x] https://commits.webkit.org/276282@main - REGRESSION([274077@main](https://commits.webkit.org/274077@main)): failure to build on i586 (and likely other 32bit arches): static assertion failed: Timer should stay small
