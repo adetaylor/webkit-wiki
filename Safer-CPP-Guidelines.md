@@ -55,9 +55,9 @@ if (RefPtr document = protectedOwnerDocument())
 
 **Reasoning:**
 
-This makes sure that the object passed to the function cannot be used-after-free during the execution of the function. Use a Ref / RefPtr on the stack if the object is ref-counted, a CheckedRef / CheckedPtr otherwise.
+This makes sure that the object passed to the function cannot be used-after-free during the execution of the function. Use a `Ref` / `RefPtr` on the stack if the object is ref-counted, a `CheckedRef` / `CheckedPtr` otherwise.
 
-Similarly, we should be using RetainPtr for Objective C objects, OSObjectPtr for Darwin OS objects and CachedResourceHandle for CachedResource objects.
+Similarly, we should be using `RetainPtr` for Objective C objects, `OSObjectPtr` for Darwin OS objects and `CachedResourceHandle` for `CachedResource` objects.
 
 **Right:**
 ```cpp
@@ -182,7 +182,7 @@ return is<Element>(node) ? &downcast<Element>(node) : nullptr;
 
 **Note:**
 
-JavaScriptCore uses `jsDynamicCast<>()` instead of `dynamicDowncast<>()` for JSValue.
+JavaScriptCore uses `jsDynamicCast<>()` instead of `dynamicDowncast<>()` for `JSValue`.
 
 
 ### Use strongly-typed identifiers instead of `uint64_t`
@@ -259,7 +259,7 @@ bool m_isDouble;
 A `std::variant<>` may be larger than an equivalent union and may thus be unsuited for classes where the size matters for performance.
 
 
-## Use `ASCIILiteral` instead of const char* for string literals
+## Use `ASCIILiteral` instead of `const char*` for string literals
 
 **Reasoning:**
 
@@ -300,7 +300,7 @@ static const char* toString(EnumType value)
 }
 ```
 
-## Use `std::exchange()` instead of `WTFMove()` when the “moved-from“ variable may get reused
+## Use `std::exchange()` instead of `WTFMove()` when the "moved-from" variable may get reused
 
 **Reasoning:**
 
