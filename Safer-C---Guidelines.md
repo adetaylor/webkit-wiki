@@ -3,15 +3,15 @@
 
 ## Use smart pointers for object lifetime management
 
-In the following guidelines, the definition of a trivial member function is a function that is inline and cannot cause this to get destroyed. It usually applies to simple getters / setters.
+> In the following guidelines, the definition of a trivial member function is a function that is inline and cannot cause this to get destroyed. It usually applies to simple getters / setters.
 
 ### When calling a non-trivial member function on an object, hold a smart pointer to the object on the stack
 
 **Reasoning:**
 
-This makes sure the member function cannot make a use-after-free use of this during its execution. Use a Ref / RefPtr on the stack if the object is ref-counted, a CheckedRef / CheckedPtr otherwise.
+This makes sure the member function cannot make a use-after-free use of this during its execution. Use a `Ref` / `RefPtr` on the stack if the object is ref-counted, a `CheckedRef` / `CheckedPtr` otherwise.
 
-Similarly, we should be using RetainPtr for Objective C objects, OSObjectPtr for Darwin OS objects and CachedResourceHandle for CachedResource objects.
+Similarly, we should be using `RetainPtr` for Objective C objects, `OSObjectPtr` for Darwin OS objects and `CachedResourceHandle` for CachedResource objects.
 
 Note that it is important for the smart pointer to be a stack variable. Calling a function on a data member that is has a smart pointer type is not truly safe because this data member could get reassigned while the function is running.
 
@@ -78,7 +78,7 @@ registerWithDocument(element->document());
 
 **Reasoning:**
 
-This makes sure we don’t use-after-free data members by enforcing that pointers cannot become stale. Use Ref / RefPtr for ref-counted objects that you which to keep alive. Use WeakRef / WeakPtr for other pointers or when you need to avoid reference cycles.
+This makes sure we don’t use-after-free data members by enforcing that pointers cannot become stale. Use `Ref` / `RefPtr` for ref-counted objects that you which to keep alive. Use `WeakRef` / `WeakPtr` for other pointers or when you need to avoid reference cycles.
 
 **Right:**
 ```cpp
@@ -106,7 +106,7 @@ private:
 
 **Notes:**
 
-We do not recommend using CheckedRef / CheckedPtr for data members. The reason for this is that crashes caused by  CheckedRef / CheckedPtr (to prevent use-after-free) are currently extremely hard to debug without a reproduction case if the CheckedRef / CheckedPtr is not on the stack.
+We do not recommend using `CheckedRef` / `CheckedPtr` for data members. The reason for this is that crashes caused by `CheckedRef` / `CheckedPtr` (to prevent use-after-free) are currently extremely hard to debug without a reproduction case if the `CheckedRef` / `CheckedPtr` is not on the stack.
 
 
 ## Manage resources automatically using resource handles and RAII
@@ -115,7 +115,7 @@ We do not recommend using CheckedRef / CheckedPtr for data members. The reason f
 
 This avoids leaks, double frees and complexity related to manual resource management.
 
-A few examples of this are using Ref / RefPtr instead of explicit ref() / deref() calls. Use WTF::UniqueRef / std::unique_ptr to avoid explicit new / delete calls. Using Locker to avoid explicit calls to Lock::lock() / Lock:unlock(). In general, this applies to any 2 operations / function calls that need to be balanced in order to avoid a bug / leak. It is too easy for calls to get unbalanced, particularly due to early returns. RAII objects / handles avoids this class of bugs.
+A few examples of this are using `Ref` / `RefPtr` instead of explicit `ref()` / `deref()` calls. Use `WTF::UniqueRef` / `std::unique_ptr` to avoid explicit `new` / `delete` calls. Using `Locker` to avoid explicit calls to `Lock::lock()` / `Lock:unlock()`. In general, this applies to any 2 operations / function calls that need to be balanced in order to avoid a bug / leak. It is too easy for calls to get unbalanced, particularly due to early returns. RAII objects / handles avoids this class of bugs.
 
 **Right:**
 ```cpp
@@ -143,11 +143,11 @@ RunLoop::main().dispatch([resource] {
 
 ## Guard against type confusion
 
-### Use downcast<>() when casting to a subclass type
+### Use `downcast<>()` when casting to a subclass type
 
 **Reasoning:**
 
-downcast<>() validates the type at runtime in release builds so that bad casts no longer result in type confusion security bugs.
+`downcast<>()` validates the type at runtime in release builds so that bad casts no longer result in type confusion security bugs.
 
 **Right:**
 ```cpp
@@ -164,7 +164,7 @@ Document* document() { return static_cast<Document>(scriptExecutionContext()); }
 JavaScriptCore uses `jsCast<>()` instead of `downcast<>()` for `JSValue`.
 
 
-### Prefer dynamicDowncast<>() over is<>() + downcast<>()
+### Prefer `dynamicDowncast<>()` over `is<>()` + `downcast<>()`
 
 **Reasoning:**
 
@@ -300,11 +300,11 @@ static const char* toString(EnumType value)
 }
 ```
 
-## Use std::exchange() instead of WTFMove() when the “moved-from“ variable may get reused
+## Use `std::exchange()` instead of `WTFMove()` when the “moved-from“ variable may get reused
 
 **Reasoning:**
 
-Using a variable after it’s been “moved from” is bad practice in C++ and may result in unexpected behavior depending on how the move constructor is implemented. std::optional move constructor, for example, doesn’t reset the “moved-from” value to `std::nullopt`.
+Using a variable after it’s been "moved from" is bad practice in C++ and may result in unexpected behavior depending on how the move constructor is implemented. std::optional move constructor, for example, doesn’t reset the "moved-from" value to `std::nullopt`.
 
 **Right:**
 ```cpp
@@ -319,9 +319,9 @@ if (RefPtr data = WTFMove(m_data))
 ```
 
 
-## Subclassing RefCounted / ThreadSafeRefCounted
+## Subclassing `RefCounted` / `ThreadSafeRefCounted`
 
-### Subclasses of RefCounted / ThreadSafeRefCounted should not have a public constructor
+### Subclasses of `RefCounted` / `ThreadSafeRefCounted` should not have a public constructor
 
 **Reasoning:**
 
@@ -345,7 +345,7 @@ public:
 }
 ```
 
-### Subclasses of RefCounted / ThreadSafeRefCounted should have a virtual destructor if they’re not final
+### Subclasses of `RefCounted` / `ThreadSafeRefCounted` should have a virtual destructor if they’re not `final`
 
 **Reasoning:**
 
@@ -410,7 +410,7 @@ std::array values { 1, 2, 3 };
 int values[] = { 1, 2, 3 };
 ```
 
-Every container / view type should do boundary check on element access
+### Every container / view type should do boundary check on element access
 
 **Reasoning:**
 
@@ -571,8 +571,8 @@ A child process can become compromised and we should therefore not trust any dat
 It is never acceptable for bad IPC from a compromised process to cause the recipient to crash, even in a non-exploitable way (such as a `RELEASE_ASSERT()`). Also, instead of ignoring bad IPC, it is better practice to kill the compromised process so it cannot keep trying to find an exploit.
 
 Validation can happen at two levels:
-* Ideally during IPC deserialization, in generated code (using [Validator=X] in *.serialization.in files)
-* Otherwise, after deserialization using a MESSAGE_CHECK()
+* Ideally during IPC deserialization, in generated code (using `[Validator=X]` in `*.serialization.in` files)
+* Otherwise, after deserialization using a `MESSAGE_CHECK()`
 
 Both will cause the termination of the sender.
 
