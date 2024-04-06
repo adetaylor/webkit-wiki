@@ -13,7 +13,7 @@ This makes sure the member function cannot make a use-after-free use of this dur
 
 Similarly, we should be using `RetainPtr` for Objective C objects, `OSObjectPtr` for Darwin OS objects and `CachedResourceHandle` for CachedResource objects.
 
-Note that it is important for the smart pointer to be a stack variable. Calling a function on a data member that is has a smart pointer type is not truly safe because this data member could get reassigned while the function is running.
+Note that it is important for the smart pointer to be a stack variable. Calling a function on a data member that has a smart pointer type is not truly safe because this data member could get reassigned while the function is running.
 
 **Right:**
 ```cpp
