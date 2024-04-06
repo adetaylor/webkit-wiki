@@ -34,7 +34,7 @@ The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/ma
 
 ## Contributing Code
 
-https://webkit.org/contributing-code/ outlines how to build and test WebKit along with code style guidelines and testing policies.
+https://webkit.org/contributing-code/ outlines how to build and test WebKit along with code style guidelines and testing policies. Also see our [Safer C++ Guidelines](https://github.com/WebKit/WebKit/wiki/Safer-CPP-Guidelines).
 
 Once a bug has been prepared and a code change drafted locally, contributors should run `git-webkit pr` to automatically generate a pull request. That script will do a few things:
 
