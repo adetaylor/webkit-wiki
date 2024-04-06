@@ -487,7 +487,7 @@ class Child : public Parent {
 ```
 
 **Wrong:**
-`cpp
+```cpp
 class Parent {
 protected:
     String m_value;
