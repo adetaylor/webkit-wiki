@@ -141,6 +141,30 @@ RunLoop::main().dispatch([resource] {
 });
 ```
 
+The GTK/WPE ports also have some types to make it easier to interact with GLib style C APIs.
+
+**Right:**
+```cpp
+GUniqueOutPtr<GError> error;
+GUniquePtr<char> address(g_dbus_address_get_for_bus_sync(G_BUS_TYPE_SESSION, nullptr, &error.outPtr()));
+if (error)
+  g_warning("Unable to get session D-Bus address: %s", error->message);
+```
+
+**Wrong**
+```cpp
+GError* error = nullptr;
+char* address = g_dbus_address_get_for_bus_sync(G_BUS_TYPE_SESSION, nullptr, &error);
+if (error) {
+  g_warning("Unable to get session D-Bus address: %s", error->message);
+  g_error_free(error);
+} else {
+  // Use address.
+  g_free(address);
+}
+```
+
+
 ## Guard against type confusion
 
 ### Use `downcast<>()` when casting to a subclass type
