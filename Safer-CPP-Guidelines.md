@@ -149,9 +149,11 @@ GUniqueOutPtr<GError> error;
 GUniquePtr<char> address(g_dbus_address_get_for_bus_sync(G_BUS_TYPE_SESSION, nullptr, &error.outPtr()));
 if (error)
   g_warning("Unable to get session D-Bus address: %s", error->message);
+else
+  // Use address.
 ```
 
-**Wrong**
+**Wrong:**
 ```cpp
 GError* error = nullptr;
 char* address = g_dbus_address_get_for_bus_sync(G_BUS_TYPE_SESSION, nullptr, &error);
