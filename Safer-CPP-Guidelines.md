@@ -51,7 +51,7 @@ if (RefPtr document = protectedOwnerDocument())
 ```
 
 
-### When passing an object tonon-trivial function, hold a smart pointer to this object on the stack
+### When passing an object to non-trivial function, hold a smart pointer to this object on the stack
 
 **Reasoning:**
 
