@@ -57,7 +57,7 @@ if (RefPtr document = protectedOwnerDocument())
 
 This makes sure that the object passed to the function cannot be used-after-free during the execution of the function. Use a `Ref` / `RefPtr` on the stack if the object is ref-counted, a `CheckedRef` / `CheckedPtr` otherwise.
 
-Similarly, we should be using `RetainPtr` for Objective C objects, `OSObjectPtr` for Darwin OS objects and `CachedResourceHandle` for `CachedResource` objects.
+Similarly, we should be using `RetainPtr` for Objective C objects, `OSObjectPtr` for Darwin OS objects, `GRefPtr` for various GLib types, and `CachedResourceHandle` for `CachedResource` objects.
 
 **Right:**
 ```cpp
