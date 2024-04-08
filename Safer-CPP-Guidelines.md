@@ -3,17 +3,17 @@
 
 ## Use smart pointers for object lifetime management
 
-> In the following guidelines, the definition of a trivial member function is a function that is inline and cannot cause this to get destroyed. It usually applies to simple getters / setters.
+> In the following guidelines, the definition of a trivial member function is a function that is inline and cannot cause `this` to get destroyed. It usually applies to simple getters / setters.
 
 ### When calling a non-trivial member function on an object, hold a smart pointer to the object on the stack
 
 **Reasoning:**
 
-This makes sure the member function cannot make a use-after-free use of this during its execution. Use a `Ref` / `RefPtr` on the stack if the object is ref-counted, a `CheckedRef` / `CheckedPtr` otherwise.
+This makes sure the member function cannot make a use-after-free use of `this` during its execution. Use a `Ref` / `RefPtr` on the stack if the object is ref-counted, a `CheckedRef` / `CheckedPtr` otherwise.
 
 Similarly, we should be using `RetainPtr` for Objective C objects, `OSObjectPtr` for Darwin OS objects, `GRefPtr` for various GLib types, and `CachedResourceHandle` for CachedResource objects.
 
-Note that it is important for the smart pointer to be a stack variable. Calling a function on a data member that has a smart pointer type is not truly safe because this data member could get reassigned while the function is running.
+Note that it is important for the smart pointer to be a stack variable. Calling a function on a data member that has a smart pointer type is not truly safe, because this data member could get reassigned while the function is running.
 
 **Right:**
 ```cpp
@@ -78,7 +78,7 @@ registerWithDocument(element->document());
 
 **Reasoning:**
 
-This makes sure we don’t use-after-free data members by enforcing that pointers cannot become stale. Use `Ref` / `RefPtr` for ref-counted objects that you which to keep alive. Use `WeakRef` / `WeakPtr` for other pointers or when you need to avoid reference cycles.
+This makes sure we don’t use-after-free data members, by enforcing that pointers cannot become stale. Use `Ref` / `RefPtr` for ref-counted objects that you wish to keep alive. Use `WeakRef` / `WeakPtr` for other pointers, or when you need to avoid reference cycles.
 
 **Right:**
 ```cpp
@@ -115,7 +115,11 @@ We do not recommend using `CheckedRef` / `CheckedPtr` for data members. The reas
 
 This avoids leaks, double frees and complexity related to manual resource management.
 
-A few examples of this are using `Ref` / `RefPtr` instead of explicit `ref()` / `deref()` calls. Use `WTF::UniqueRef` / `std::unique_ptr` to avoid explicit `new` / `delete` calls. Using `Locker` to avoid explicit calls to `Lock::lock()` / `Lock:unlock()`. In general, this applies to any 2 operations / function calls that need to be balanced in order to avoid a bug / leak. It is too easy for calls to get unbalanced, particularly due to early returns. RAII objects / handles avoids this class of bugs.
+A few examples of this are:
+* Use `Ref` / `RefPtr` instead of explicit `ref()` / `deref()` calls.
+* Use `WTF::UniqueRef` / `std::unique_ptr` to avoid explicit `new` / `delete` calls.
+* Use `Locker` to avoid explicit calls to `Lock::lock()` / `Lock:unlock()`.
+In general, this applies to any 2 operations / function calls that need to be balanced in order to avoid a bug / leak. It is too easy for calls to get unbalanced, particularly due to early returns. RAII objects / handles avoids this class of bugs.
 
 **Right:**
 ```cpp
@@ -194,7 +198,7 @@ JavaScriptCore uses `jsCast<>()` instead of `downcast<>()` for `JSValue`.
 
 **Reasoning:**
 
-`is<>()` + `downcast<>()` ends up checking the type twice which may be inefficient. It is also more error prone than a single call to `dynamicDowncast<>()` call. `dynamicDowncast<>()` often results in more concise code too.
+`is<>()` + `downcast<>()` ends up checking the type twice, which may be inefficient. It is also more error prone than a single call to `dynamicDowncast<>()`. `dynamicDowncast<>()` often results in more concise code too.
 
 **Right:**
 ```cpp
@@ -351,7 +355,7 @@ if (RefPtr data = WTFMove(m_data))
 
 **Reasoning:**
 
-A public `create()` factory function should be exposed to create instances of such classes to make sure that we adopt the object after construction and store it in a `Ref` / `RefPtr`. Mixing explicit memory management and ref-counting can result in use-after-free bugs.
+A public `create()` factory function should be exposed, to create instances of such classes to make sure that we adopt the object after construction and store it in a `Ref` / `RefPtr`. Mixing explicit memory management and ref-counting can result in use-after-free bugs.
 
 **Right:**
 ```cpp
@@ -562,7 +566,7 @@ Many WebKit types (such as `String`) have `isolatedCopy()` overloads which may r
 
 **Reasoning:**
 
-Multi-threading a common source of (security) bugs and these macros can help catch a lot of the bugs at build time. They also help document the code.
+Multi-threading is a common source of (security) bugs and these macros can help catch a lot of the bugs at build time. They also help document the code.
 
 **Right:**
 ```cpp
