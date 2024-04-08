@@ -119,6 +119,7 @@ A few examples of this are:
 * Use `Ref` / `RefPtr` instead of explicit `ref()` / `deref()` calls.
 * Use `WTF::UniqueRef` / `std::unique_ptr` to avoid explicit `new` / `delete` calls.
 * Use `Locker` to avoid explicit calls to `Lock::lock()` / `Lock:unlock()`.
+
 In general, this applies to any 2 operations / function calls that need to be balanced in order to avoid a bug / leak. It is too easy for calls to get unbalanced, particularly due to early returns. RAII objects / handles avoids this class of bugs.
 
 **Right:**
