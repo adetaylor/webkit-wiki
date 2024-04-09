@@ -11,7 +11,7 @@ To suggest that a merge request be backported to the current stable branch, appl
 
 ## Previous proposed merges
 
-Instead of adding more items here, instead apply the label [GLib Suggested Backport](https://github.com/WebKit/WebKit/pulls?q=label%3A%22GLib+Suggested+Backport%22) to desired merge request.
+Don't add more items here. Instead, apply the label [GLib Suggested Backport](https://github.com/WebKit/WebKit/pulls?q=label%3A%22GLib+Suggested+Backport%22) to desired merge request.
 
   * [x] https://commits.webkit.org/276608@main - [GTK] Reproducible crash on invalid web process message DrawingArea_CommitTransientZoom
   * [x] https://commits.webkit.org/276282@main - REGRESSION([274077@main](https://commits.webkit.org/274077@main)): failure to build on i586 (and likely other 32bit arches): static assertion failed: Timer should stay small
