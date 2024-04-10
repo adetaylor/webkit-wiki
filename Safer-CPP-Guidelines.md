@@ -296,6 +296,7 @@ A `std::variant<>` may be larger than an equivalent union and may thus be unsuit
 
 Using `ASCIILiteral` makes it clear that the string we’re dealing with is ASCII-only and that the string is immortal.
 This allows code to leverage these facts and be more efficient. It also documents in code what the lifetime of the string is.
+Finally, `ASCIILiteral` goes bounds checking on indexed access, thus avoiding out-of-bounds access bugs.
 
 **Right:**
 ```cpp
