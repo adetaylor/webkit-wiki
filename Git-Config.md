@@ -1,8 +1,6 @@
 The WebKit project outlines a simplified recommended setup [here](/WebKit/WebKit/wiki/Contributing). This section outlines in greater detail other configuration options certain contributors may prefer.
 
-## Remotes
-
-### Forking
+## Forking
 
 Since `git` is a decentralized version control system, a local copy can work with any remote that has the same set of shas. GitHub pull requests take advantage of this. After running [`git-webkit setup`](/WebKit/WebKit/wiki/Contributing#setup), the `.git/config` in the local WebKit repository should look something like this:
 
