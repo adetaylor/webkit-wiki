@@ -1,4 +1,10 @@
-This page explains the proper way to set test expectations, as well as highlights the differences between `merge-queue` and `unsafe-merge-queue`. There will also be a section that gives tips on what to do when you need to edit an existing pull-request, and how to cleanly re-submit that.  
+This page highlights the differences between `merge-queue` and `unsafe-merge-queue`, and explains the proper way to set test expectations. <!-- There will also be a section that gives tips on what to do when you need to edit an existing pull-request, and how to cleanly re-submit that. -->
+
+## Merge-Queue
+The merge-queue is used in conjunction with `Tools/Scripts/git-webkit land`. When a pull-request goes through merge-queue it will build and test it. After you have pushed your pull-request to [WebKit Pull Requests](https://github.com/WebKit/WebKit/pulls), if you manually add the `Merge-Queue` label it will build and run your commit, or 'patch' if you prefer, against EWS to determine if you commit has any stylistic issues, or if your commit unexpectedly breaks things. `Merge-Queue` is going to be the label you will want to use if you need your pull-request to go through testing. Once testing is completed, and if s reviewer has approved your pull-request, the `Merge-Queue` will automatically land your pull-request for you.  
+
+## Unsafe-Merge-Queue
+`Unsafe-Merge-Queue` effectively replaces `svn dcommit` since directly committing to the repository is now only available to repository administers. When using `Unsafe-Merge-Queue` a style check will be run on your pull-request, and then it will attempt to commit the pull-request without building it or testing it. As long as there are no stylistic, or formatting issues `Unsafe-Merge-Queue` will commit your change in approx. 1-3 minutes. `Unsafe-Merge-Queue` should **ONLY** be used for very simple, basic changes that can't really break anything too badly, or setting expectations for tests. 
 
 ## Test Gardening
 Since direct commit access is limited only to repository administers, this will change the prior workflow of Test Gardening/Setting test expectations. As such the new process is outlined as follows: 
@@ -20,12 +26,7 @@ An example template for your commit message looks like:
 
 6. After adding the `unsafe-merge-queue` label, your pull-request will attempt to be committed. This should take 1-3 minutes, and should commit without issue given that you followed the steps above. If there is an issue with your pull-request then the commit will fail with an error.
 
-## Merge-Queue
-The merge-queue is used in conjunction with `Tools/Scripts/git-webkit land`. When a pull-request goes through merge-queue it will build and test it. After you have pushed your pull-request to [WebKit Pull Requests](https://github.com/WebKit/WebKit/pulls), if you manually add the `Merge-Queue` label it will build and run your commit, or 'patch' if you prefer, against EWS to determine if you commit has any stylistic issues, or if your commit unexpectedly breaks things. `Merge-Queue` is going to be the label you will want to use if you need your pull-request to go through testing. Once testing is completed, and if s reviewer has approved your pull-request, the `Merge-Queue` will automatically land your pull-request for you.  
-
-## Unsafe-Merge-Queue
-`Unsafe-Merge-Queue` effectively replaces `svn dcommit` since directly committing to the repository is now only available to repository administers. When using `Unsafe-Merge-Queue` a style check will be run on your pull-request, and then it will attempt to commit the pull-request without building it or testing it. As long as there are no stylistic, or formatting issues `Unsafe-Merge-Queue` will commit your change in approx. 1-3 minutes. `Unsafe-Merge-Queue` should **ONLY** be used for very simple, basic changes that can't really break anything too badly, or setting expectations for tests. 
-
+<!--
 ## Editing existing pull-requests
-information to be published at a future date. 
-
+information to be published at a future date.
+-->
