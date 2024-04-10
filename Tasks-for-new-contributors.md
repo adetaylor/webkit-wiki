@@ -8,9 +8,9 @@ Please join the WebKit slack and ping the listed mentor before you start to avoi
 
 ### Improve disassembly output
 
-Mentor: [@justinmichaud](/justinmichaud) PST
+Mentor: [@justinmichaud](https://github.com/justinmichaud) PST
 
-We are missing SIMD arm instructions in our disassembly. This task involves adding those, and making the disassembler output more pretty. 
+We are missing SIMD arm instructions in our disassembly. This task involves adding those, and making the disassembler output more pretty.
 
 See `Source/JavaScriptCore/disassembler/ARM64/A64DOpcode.h`.
 
@@ -18,12 +18,12 @@ See `Source/JavaScriptCore/disassembler/ARM64/A64DOpcode.h`.
 
 ### Implement the Relaxed SIMD proposal (stage 3)
 
-Mentor: [@justinmichaud](/justinmichaud) PST
+Mentor: [@justinmichaud](https://github.com/justinmichaud) PST
 
 This task involves adding a new JSC feature flag, implementing the listed instructions in the proposal on ARM and Intel in both WASM JIT tiers, and importing the spec tests / writing your own.
 
 ### Implement extended constant (stage 4)
 
-Mentor: [@justinmichaud](/justinmichaud)  [@Constellation](/Constellation) PST
+Mentor: [@justinmichaud](https://github.com/justinmichaud)  [@Constellation](https://github.com/Constellation) PST
 
 This task involves adding a new JSC feature flag, implementing the listed instructions in the proposal to allow more expression for wasm constants, and importing the spec tests / writing your own.

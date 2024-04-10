@@ -12,7 +12,7 @@ Or, if a [ssh key](https://github.com/settings/keys) has already been added to y
 git clone git@github.com:WebKit/WebKit.git WebKit
 ```
 
-For more information about alternate WebKit remotes, consult [Alternate Remotes](/WebKit/WebKit/wiki/Git-Config#Alternate-Remotes)
+For more information about alternate WebKit remotes, consult [Alternate Remotes](https://github.com/WebKit/WebKit/wiki/Git-Config#Alternate-Remotes)
 
 ## Setup
 
@@ -24,13 +24,13 @@ WebKit provides a number of scripts in [Tools/Scripts](https://github.com/WebKit
 
 The `setup` sub-command of [git-webkit](https://github.com/WebKit/WebKit/tree/main/Tools/Scripts/git-webkit) configures your local WebKit checkout for contributing code to the WebKit project. This script will occasionally prompt the user for input. The script does the following:
 
-* Set your [name](/WebKit/WebKit/wiki/Git-Config#username) and [email address](/WebKit/WebKit/wiki/Git-Config#useremail) for the WebKit repository
-* [Make Objective-C diffs easier to digest](/WebKit/WebKit/wiki/Git-Config#diff)
+* Set your [name](https://github.com/WebKit/WebKit/wiki/Git-Config#username) and [email address](https://github.com/WebKit/WebKit/wiki/Git-Config#useremail) for the WebKit repository
+* [Make Objective-C diffs easier to digest](https://github.com/WebKit/WebKit/wiki/Git-Config#diff)
 * Setup a commit message generator
-* Set an [editor for commit messages](/WebKit/WebKit/wiki/Git-Config#coreeditor)
+* Set an [editor for commit messages](https://github.com/WebKit/WebKit/wiki/Git-Config#coreeditor)
 * Store a [GitHub API token](https://github.com/settings/tokens) in your system credential store
 * Configure `git` to use the [GitHub API token](https://github.com/settings/tokens) when prompted for credentials, if using the HTTPS remote
-* Create a [user owned fork](/WebKit/WebKit/wiki/Git-Config#Forking) of the WebKit repository
+* Create a [user owned fork](https://github.com/WebKit/WebKit/wiki/Git-Config#Forking) of the WebKit repository
 
 ## Contributing Code
 
@@ -44,7 +44,7 @@ Once a bug has been prepared and a code change drafted locally, contributors sho
 * Push the pull-request branch to a user's personal fork of the project
 * Create (or update) a pull-request to merge to the parent branch in WebKit
 
-Note that the same process is used to update an already published pull-request. For a detailed breakdown on the expected format of WebKit pull requests, see [Pull Requests](/WebKit/WebKit/wiki/Pull-Requests).
+Note that the same process is used to update an already published pull-request. For a detailed breakdown on the expected format of WebKit pull requests, see [Pull Requests](https://github.com/WebKit/WebKit/wiki/Pull-Requests).
 
 ### Code Review: Updating a PR
 
