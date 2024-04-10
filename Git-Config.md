@@ -2,24 +2,6 @@ The WebKit project outlines a simplified recommended setup [here](/WebKit/WebKit
 
 ## Remotes
 
-### Alternate Remotes
-
-The WebKit project currently has 5 different remotes:
-
-- [github.com/WebKit/WebKit](https://github.com/WebKit/WebKit)
-- [svn.webkit.org](https://svn.webkit.org/repository/webkit/)
-- [git.webkit.org (https)](https://git.webkit.org/?p=WebKit.git;a=summary)
-- [git.webkit.org (http)](https://git.webkit.org/?p=WebKit.git;a=summary)
-- [github.com/WebKit/WebKit-http](https://github.com/WebKit/WebKit-http)
-
-The first remote, [github.com/WebKit/WebKit](https://github.com/WebKit/WebKit), is an actively maintained `git` mirror of [svn.webkit.org](https://svn.webkit.org/repository/webkit/) that will soon become the canonical home of the WebKit project. We strongly recommend that all contributors use this remote for routine development.
-
-The second remote, [svn.webkit.org](https://svn.webkit.org/repository/webkit/), is the current canonical remote for the WebKit project. If a contributor is contributing to the WebKit project on a release branch, this is the remote they should be using. Note that this remote is Subversion, not git.
-
-[git.webkit.org (https)](https://git.webkit.org/?p=WebKit.git;a=summary) is a deprecated `git` mirror of [svn.webkit.org](https://svn.webkit.org/repository/webkit/). This mirror is maintained, but commit authorship is incorrect. This means that the shas of commits in this repository _do not_ match those from [github.com/WebKit/WebKit](https://github.com/WebKit/WebKit). This remote is sufficient for patch workflows, but contributors relying on it should migrate to [github.com/WebKit/WebKit](https://github.com/WebKit/WebKit) as we start using pull requests.
-
-[git.webkit.org (http)](https://git.webkit.org/?p=WebKit.git;a=summary) and [github.com/WebKit/WebKit-http](https://github.com/WebKit/WebKit-http) the same repository but served in different locations. This remote is no longer maintained and should not be relied on.
-
 ### Forking
 
 Since `git` is a decentralized version control system, a local copy can work with any remote that has the same set of shas. GitHub pull requests take advantage of this. After running [`git-webkit setup`](/WebKit/WebKit/wiki/Contributing#setup), the `.git/config` in the local WebKit repository should look something like this:
@@ -143,3 +125,21 @@ a pull request branch?
 ```
 
 Managing pull requests often involves force pushing. This may result in historical changes being lost as a contributor responds to feedback. `git-webkit` supports saving old branches for the duration of a pull request. Some projects may wish to aggressively disable this option with `never` because contributors do not own user-specific forks. `when-user-owned` is generally considered the default option, which will create history branches only when a contributor owns a remote fork and is using the `overwrite` workflow.
+
+### Alternate Remotes (old)
+
+The WebKit project previously has 5 different remotes:
+
+- [github.com/WebKit/WebKit](https://github.com/WebKit/WebKit)
+- [svn.webkit.org](https://svn.webkit.org/repository/webkit/)
+- [git.webkit.org (https)](https://git.webkit.org/?p=WebKit.git;a=summary)
+- [git.webkit.org (http)](https://git.webkit.org/?p=WebKit.git;a=summary)
+- [github.com/WebKit/WebKit-http](https://github.com/WebKit/WebKit-http)
+
+The first remote, [github.com/WebKit/WebKit](https://github.com/WebKit/WebKit), which began as a `git` mirror of [svn.webkit.org](https://svn.webkit.org/repository/webkit/), has since become the canonical home of the WebKit project.
+
+The second remote, [svn.webkit.org](https://svn.webkit.org/repository/webkit/), was previously the canonical remote for the WebKit project.
+
+[git.webkit.org (https)](https://git.webkit.org/?p=WebKit.git;a=summary) was a deprecated `git` mirror of [svn.webkit.org](https://svn.webkit.org/repository/webkit/).
+
+[git.webkit.org (http)](https://git.webkit.org/?p=WebKit.git;a=summary) and [github.com/WebKit/WebKit-http](https://github.com/WebKit/WebKit-http) were the same repository but served in different locations.
