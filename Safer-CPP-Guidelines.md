@@ -187,7 +187,7 @@ Document* document() { return downcast<Document>(scriptExecutionContext()); }
 
 **Wrong:**
 ```cpp
-Document* document() { return static_cast<Document>(scriptExecutionContext()); }
+Document* document() { return static_cast<Document*>(scriptExecutionContext()); }
 ```
 
 **Note:**
