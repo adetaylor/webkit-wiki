@@ -46,9 +46,7 @@ Once a bug has been prepared and a code change drafted locally, contributors sho
 
 Note that the same process is used to update an already published pull-request. For a detailed breakdown on the expected format of WebKit pull requests, see [Pull Requests](/WebKit/WebKit/wiki/Pull-Requests).
 
-## Code Review
-
-### Updating a PR
+### Code Review: Updating a PR
 
 Make sure you're on the right branch. Make the necessary changes in your source tree. When you're ready, run `git-webkit pr` again to update the PR.
 
