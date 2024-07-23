@@ -81,7 +81,7 @@ registerWithDocument(element->document());
 This makes sure we don’t use-after-free data members, by enforcing that pointers cannot become stale. Use `Ref` / `RefPtr` for ref-counted objects that you wish to keep alive. Use `WeakRef` / `WeakPtr` / `CheckedRef` / `CheckedPtr` for other pointers, or when you need to avoid reference cycles. There are several things you should consider when choosing when deciding whether to use `Checked` pointers or `Weak` ones:
 - Does the type subclass `CanMakeWeakPtr` or `CanMakeCheckedPtr` already? You may consider using the pointer type which doesn’t require subclasses a new base class.
 - Checked pointers are normally more performant than Weak ones and may be required in performance-sensitive code.
-- CheckedPtr will crash in the case where WeakPtr would harmlessly become null, and those crashes can be hard to debug.
+- Checked pointers will crash in the case where Weak ones would harmlessly become null, and those crashes can be hard to debug.
 
 **Right:**
 ```cpp
