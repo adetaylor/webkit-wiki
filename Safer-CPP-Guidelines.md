@@ -109,6 +109,46 @@ private:
 };
 ```
 
+### Capture `protectedThis` or `weakThis` in asynchronous lambdas where you need to use `this`
+
+**Reasoning:**
+
+Before using `this` in an asynchronous lambda, we should make sure that `this` is still alive. You should capture `protectedThis = Ref { *this }` to make sure `this` to keep `this` alive until the lambda is executed.
+Alternatively, if you don’t need to keep `this` alive, you can capture `weakThis = WeakPtr { *this }`. When capturing `weakThis`, you should NOT capture `this` as its use would be too error-prone. You should capture `weakThis` only then in the lambda, you can construct a `protectedThis` from the `weakThis` and null check it right away.
+
+**Right:**
+```cpp
+// Keep `this` alive.
+doAsyncWork([this, protectedThis] {
+    foo(); // Member function on `this`.
+    bar(); // Member function on `this`.
+});
+
+// Do not keep `this` alive but use it safely.
+doAsyncWork([weakThis = WeakPtr { *this }] {
+    RefPtr protectedThis = weakThis.get();
+    if (!protectedThis)
+        return;
+    protectedThis->foo();
+    protectedThis->bar();
+});
+```
+
+**Wrong:**
+```cpp
+// Fails to keep `this` alive.
+doAsyncWork([this] {
+    foo(); // Member function on `this`.
+});
+
+// Shouldn’t capture `this` as it is too easy to use-after-free.
+doAsyncWork([this, weakThis = WeakPtr { *this }] {
+    if (!weakThis)
+        return;
+    foo(); // Member function on `this`.
+    bar(); // Member function on `this`.
+});
+```
 
 ## Manage resources automatically using resource handles and RAII
 
