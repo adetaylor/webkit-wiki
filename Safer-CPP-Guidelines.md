@@ -78,7 +78,9 @@ registerWithDocument(element->document());
 
 **Reasoning:**
 
-This makes sure we don’t use-after-free data members, by enforcing that pointers cannot become stale. Use `Ref` / `RefPtr` for ref-counted objects that you wish to keep alive. Use `WeakRef` / `WeakPtr` for other pointers, or when you need to avoid reference cycles.
+This makes sure we don’t use-after-free data members, by enforcing that pointers cannot become stale. Use `Ref` / `RefPtr` for ref-counted objects that you wish to keep alive. Use `WeakRef` / `WeakPtr` / `CheckedRef` / `CheckedPtr` for other pointers, or when you need to avoid reference cycles. There are several things you should consider when choosing when deciding whether to use `Checked` pointers or `Weak` ones:
+- Does the type subclass `CanMakeWeakPtr` or `CanMakeCheckedPtr` already? You may consider using the pointer type which doesn’t require subclasses a new base class.
+- Checked pointers are normally more performant than Weak ones and may be required in performance-sensitive code. Note however that crashes caused by Checked pointers may be harder to debug.
 
 **Right:**
 ```cpp
@@ -89,6 +91,9 @@ private:
     WeakPtr<RenderObject> m_renderer;
     WeakRef<RenderObject> m_rootRenderer;
     WeakHashSet<Listener> m_listeners;
+    CheckedPtr<Owner> m_owner;
+    CheckedRef<Owner> m_rootOwner;
+    HashSet<CheckedRef<Owner>> m_owners;
 };
 ```
 
@@ -103,10 +108,6 @@ private:
     HashSet<Listener*> m_listeners;
 };
 ```
-
-**Notes:**
-
-We do not recommend using `CheckedRef` / `CheckedPtr` for data members. The reason for this is that crashes caused by `CheckedRef` / `CheckedPtr` (to prevent use-after-free) are currently extremely hard to debug without a reproduction case if the `CheckedRef` / `CheckedPtr` is not on the stack.
 
 
 ## Manage resources automatically using resource handles and RAII
