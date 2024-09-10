@@ -18,7 +18,9 @@ While per-object-file trace information is useful for uncovering what causes com
 1. Clean your build directory (but make sure it still ''exists'').
 2. `ClangBuildAnalyzer --start path/to/WebKitBuild`
 3. `make debug ARGS='OTHER_CFLAGS="-ftime-trace" OTHER_CPLUSPLUSFLAGS=-ftime-trace' `
+
 or:
+
 3. Create a file called `LocalOverrides.xcconfig` in the root of the WebKit checkout with the following contents, and build with Xcode:
 ``` cpp
 OTHER_CFLAGS=$(inherited) -ftime-trace
@@ -26,7 +28,8 @@ OTHER_CPLUSPLUSFLAGS=$(inherited) -ftime-trace
 ```
 
 Then, when the build is complete:
-4. `ClangBuildAnalyzer --stop path/to/WebKitBuild path/to/output/file`
+
+4. `ClangBuildAnalyzer --stop path/to/WebKitBuild path/to/output/file` (and alternative to `--start` then `--stop`, is `--all`)
 5. `ClangBuildAnalyzer --analyze path/to/output/file > path/to/text/file`
 
 ClangBuildAnalyzer writes a file with the current time to your build directory when run with `--start`. Then when run with `--stop`, it collects all of the trace files generated during that time window, and collates them into the output file. `--analyze` turns that into human-readable output. Profiling individual projects within WebKit would involve running steps 1-5 from within, e.g., the Source/WebCore directory.
