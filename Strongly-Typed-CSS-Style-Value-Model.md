@@ -130,7 +130,7 @@ which is enough to allow bi-directional conversion.
 
 But if one needs more control over conversion, specialization can be used just like with `Serialization`. In this case, one would specialize the types `ToCSS` and `ToStyle`. For `Bar` that might look like this (though, remember, there would be no reason to do this for `Bar`):
 
-``c++
+```c++
 template<> struct ToCSS<Bar> { 
     auto operator()(const Bar& bar, const RenderStyle& style) -> CSS::Bar
     {
