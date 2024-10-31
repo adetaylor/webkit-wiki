@@ -1,5 +1,10 @@
 Explanation of the project to replace the existing representations of CSS property values with a new implementation based on a value semantics and strong typing.
 
+The goals of the project are make a system that:
+- has few bugs
+- takes less memory
+- is adaptable to autogeneration via process-css-properties.py
+
 ***
 
 Today, roughly speaking, CSS property values are represented in two main forms:
