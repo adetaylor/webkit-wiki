@@ -14,7 +14,7 @@ Today, roughly speaking, CSS property values are represented in two main forms:
 
 These two forms need to be bi-directionally convertible. `CSS` gets converted to `Style` via style building, and `Style` gets converted to `CSS` for computed style extraction.
 
-In the current implantation, pretty much all of this uses reference semantics and is hand written, often relying on the programmer to perform unsafe casting to perform conversions.
+In the current implementation, pretty much all of this uses reference semantics and is hand written, often relying on the programmer to perform unsafe casting to perform conversions.
 
 The goal of this project is to replace both the `CSS` and `Style` parts with a new system based on value types. By utilizing strongly typed primitive values, the goal is to allow higher level types composed of the primitives to write as little code as possible, instead, focusing on declaratively describing the types.
 
