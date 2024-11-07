@@ -15,6 +15,6 @@ List of projects worth doing
 #### Tests
 * Find and remove tests that duplicate testing already done in imported WPT tests
 
-#### Tests
+#### Code Cleanup
 * Make WebIDL types use Ref<> (rather than RefPtr<>) for interfaces in dictionaries
 * Make WebIDL types use Ref<> (rather than RefPtr<>) for interfaces in unions
