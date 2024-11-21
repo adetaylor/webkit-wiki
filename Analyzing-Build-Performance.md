@@ -173,6 +173,34 @@ public:
 inline YourClass& MyClass::getFoo() { return YourClass::foo(); }
 ```
 
+### Avoid Including Inlines.h headers in other headers
+
+Including Inlines.h headers inside another header defeats the purpose of isolating the inline implementation in its own file. An exception is made to allow including one Inlines.h file in another Inlines.h header, so if an Inlines.h header is strictly required in order to avoid a compilation error, the destination header should be an Inlines.h header itself.
+
+Bad:
+``` cpp
+// MyClass.h
+#include "YourClassInlines.h"
+
+class MyClass {
+public:
+    inline void getFoo() { YourClass::getFoo(); }
+};
+```
+
+Good:
+``` cpp
+// MyClass.h
+class MyClass {
+public:
+    inline void getFoo();
+};
+
+// MyClassInlines.h
+#include "YourClassInlines.h"
+inline YourClass& MyClass::getFoo() { return YourClass::foo(); }
+```
+
 ### Avoid Virtual Inlines
 
 Virtual functions will almost never gain any benefit from being inlined (unless callers cast the function itself, e.g.: `foo->Derived::bar()` instead of `foo->bar()`, which is a very uncommon practice). If a virtual function definition in a header file requires including an external header, consider moving the definition into the implementation file. E.g.:
