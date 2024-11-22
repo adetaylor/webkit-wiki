@@ -13,6 +13,6 @@ Topics | <span><!-- intentionally blank --></span>
 [Coding Guidelines](#TODO-needs-overview-page) | [Safer C++ Guidelines (current)](https://github.com/WebKit/WebKit/wiki/Safer-CPP-Guidelines)
 [Ports](#TODO-needs-overview-page) | [GLib Stable Branches](https://github.com/WebKit/WebKit/wiki/GLib-Stable-Branches)
 [Build Performance](#TODO-needs-overviewpage) |[Analyzing Build Performance](https://github.com/WebKit/WebKit/wiki/Analyzing-Build-Performance) • [Expensive Headers](https://github.com/WebKit/WebKit/wiki/Expensive-Headers)
-[Proposals](#TODO-needs-overviewpage) | [Generated & Modernized CSS Properties and Values](https://github.com/WebKit/WebKit/wiki/DRAFT:-Proposal-for-Generated-&-Modernized-CSS-Properties-and-Values)
+[Proposals](#TODO-needs-overviewpage) | [Generated & Modernized CSS Properties and Values](https://github.com/WebKit/WebKit/wiki/DRAFT:-Proposal-for-Generated-&-Modernized-CSS-Properties-and-Values) • [Generated Quirks Metadata](https://github.com/WebKit/WebKit/wiki/Proposal:-Generated-Quirks-Metadata) 
 [Migration (old)](https://github.com/WebKit/WebKit/wiki/Migration) | [Subversion](https://github.com/WebKit/WebKit/wiki/Migration#subversion) • [Obsolete Mirror](https://github.com/WebKit/WebKit/wiki/Migration#obsolete-mirror) • [`webkit-patch`](https://github.com/WebKit/WebKit/wiki/Migration#webkit-patch) • [`webkit-patch` Reverse Look-up](https://github.com/WebKit/WebKit/wiki/Migration#webkit-patch-reverse-look-up)
 <!-- TODO: ⬆️  should we just delete the Migration page? ⬆️  -->
