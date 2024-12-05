@@ -54,7 +54,7 @@ Before being landed by a [committer](https://github.com/orgs/WebKit/teams/commit
 
 ## Landing Changes
 
-### Merge-Queue
+### Merge-Queues
 
 To land a pull request, add the [`safe-merge-queue`](https://github.com/WebKit/WebKit/labels?q=safe-merge-queue), [`merge-queue`](https://github.com/WebKit/WebKit/labels?q=merge-queue), or [`unsafe-merge-queue`](https://github.com/WebKit/WebKit/labels?q=unsafe-merge-queue) label to your pull request. These labels will put your pull request into [Safe-Merge-Queue](https://ews-build.webkit.org/#/builders/Safe-Merge-Queue), [Merge-Queue](https://ews-build.webkit.org/#/builders/Merge-Queue), and [Unsafe-Merge-Queue](https://ews-build.webkit.org/#/builders/Unsafe-Merge-Queue), respectively, which will commit your pull request to the WebKit repository.
 
