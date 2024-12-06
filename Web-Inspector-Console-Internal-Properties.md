@@ -2,24 +2,25 @@ When objects are logged to the Web Inspector Console, visual representations are
 
 This is done in two places:
 
-* [plain JavaScript] `JSInjectedScriptHost::getInternalProperties`
-* [web content] `WebInjectedScriptHost::getInternalProperties`
+* for core JavaScript `JSInjectedScriptHost::getInternalProperties`
+* for all other web `WebInjectedScriptHost::getInternalProperties`
 
 Internal properties are shown as greyed-out properties when viewing any JavaScript object in Web Inspector. 
 
 Internal property “descriptors” take the form of a `JSArray` of:
 
-```
-// matches `Runtime.InternalPropertyDescriptor`
+```json
 {
-    name: "...",
-    value: <JSValue>,
+    "name": "...",
+    "value": <JSValue>
 }
 ```
 
-Much of the work is done for you by doing (replace the bold):
+(which is the same format as `Runtime.InternalPropertyDescriptor` as that's eventually what they're converted into when sent to Web Inspector)
 
-```
+Much of the work is done for you by doing (replace `foo`/`Foo`/`bar`/`baz` with whatever object you're inspecting):
+
+```cpp
 if (auto* foo = JSFoo::toWrapped(vm, value)) {
     auto* array = constructEmptyArray(globalObject, nullptr);
     RETURN_IF_EXCEPTION(scope, { });
