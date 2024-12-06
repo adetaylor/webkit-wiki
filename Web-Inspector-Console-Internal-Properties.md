@@ -45,12 +45,15 @@ Web Inspector ultimately consumes this array of internal property “descriptors
 
 Past Examples:
 
-* <[https://trac.webkit.org/r261670](https://trac.webkit.org/changeset/261670)> Web Inspector: show EventTarget listeners as an internal property
-* <https://trac.webkit.org/r261499> Web Inspector: show JavaScript Worker name as an internal property
-* <https://trac.webkit.org/r255986> Web Inspector: show JavaScript Worker terminated state as an internal property
-* <https://trac.webkit.org/r224606> Web Inspector: Show Internal properties of PaymentRequest in Web Inspector Console
-* <https://trac.webkit.org/r197061> Web Inspector: Expose Proxy target and handler internal properties to Inspector
-* <https://trac.webkit.org/r187959> Web Inspector: Improve Support for PropertyName Iterator (Reflect.enumerate) in Inspector
-* <https://trac.webkit.org/r181203> Web Inspector: ES6: Improved Support for Iterator Objects
-* <https://trac.webkit.org/r180236> Web Inspector: Improved Console Support for Bound Function
-* <https://trac.webkit.org/r180235> Web Inspector: ES6: Improved Console Support for Promise Objects
+* [282553@main](https://commits.webkit.org/282553@main) Web Inspector: Console: show boundThis for arrow functions
+* [282000@main](https://commits.webkit.org/282000@main) Web Inspector: Console: add internal properties for registrations of a FinalizationRegistry
+* [264171@main](https://commits.webkit.org/264171@main) Web Inspector: Console: add an internal property for the target of a WeakRef
+* [224767@main](https://commits.webkit.org/224767@main) Web Inspector: show EventTarget listeners as an internal property
+* [224645@main](https://commits.webkit.org/224645@main) Web Inspector: show JavaScript Worker name as an internal property
+* [220345@main](https://commits.webkit.org/220345@main) Web Inspector: show JavaScript Worker terminated state as an internal property
+* [195505@main](https://commits.webkit.org/195505@main) Web Inspector: Show Internal properties of PaymentRequest in Web Inspector Console
+* [172764@main](https://commits.webkit.org/172764@main) Web Inspector: Expose Proxy target and handler internal properties to Inspector
+* [165749@main](https://commits.webkit.org/165749@main) Web Inspector: Improve Support for PropertyName Iterator (Reflect.enumerate) in Inspector
+* [160483@main](https://commits.webkit.org/160483@main) Web Inspector: ES6: Improved Support for Iterator Objects
+* [159739@main](https://commits.webkit.org/159739@main) Web Inspector: Improved Console Support for Bound Function
+* [159738@main](https://commits.webkit.org/159738@main) Web Inspector: ES6: Improved Console Support for Promise Objects
