@@ -57,7 +57,6 @@ Adding new sources/types/levels is possible by modifying all of the following:
         * `WI.IssueMessage` (`constructor`)
     * *[Source/WebInspectorUI/UserInterface/Views/ConsoleMessageView.js](https://trac.webkit.org/browser/trunk/Source/WebInspectorUI/UserInterface/Views/ConsoleMessageView.js)*
         * (controls how console messages are rendered)
-        * **NOTE**: please contact the [Web Inspector team](https://webinspector.apple.com/) if you’d like to do change something
 
 Past Examples:
 
