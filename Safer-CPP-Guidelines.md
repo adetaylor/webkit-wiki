@@ -50,6 +50,9 @@ if (RefPtr document = protectedOwnerDocument())
     document->foo();
 ```
 
+**Exception:**
+
+See [data members that never get reassigned and are marked as const](#mark-data-members-that-are-smart-pointers-as-const-if-they-never-get-reassigned).
 
 ### When passing an object to non-trivial function, hold a smart pointer to this object on the stack
 
@@ -73,6 +76,10 @@ auto& element = task.element();
 adjustDirectionality(element);
 registerWithDocument(element->document());
 ```
+
+**Exception:**
+
+See [data members that never get reassigned and are marked as const](#mark-data-members-that-are-smart-pointers-as-const-if-they-never-get-reassigned).
 
 ### Use smart pointers instead of raw pointers for all data members
 
@@ -107,6 +114,62 @@ private:
     RenderObject* m_renderer;
     RenderObject& m_rootRenderer;
     HashSet<Listener*> m_listeners;
+};
+```
+
+### Mark data members that are smart pointers as `const` if they never get reassigned
+
+**Reasoning:**
+
+Normally, we require having a smart pointer *on the stack* before calling a non-trivial member function on data members, even though that data members already are smart pointers. The reasoning is that those data members may get reassigned in the middle of the call, which could lead to use-after-free. However, if the data member is never reassigned and is a smart pointer, having a smart pointer on the stack is actually unnecessary. In such cases, marking the data member as `const` lets the static analyzer know that it never gets reassigned and it will thus not warn if there is no smart pointer on the stack. This allows us to write simpler and more efficient code, while still ensuring safety.
+
+Note that this applies to lazily initialized data members too. You can still mark them as `const` and use the `lazyInitialize()` free function to initialize them.
+
+**Right:**
+```cpp
+class Foo {
+public:
+    Foo()
+        : m_bar(Bar::create())
+    { }
+
+    void doStuff()
+    {
+        // No need to use `Ref { m_bar }` or `protectedBar()` since `m_bar` is `const`.
+        m_bar->doStuff();
+    }
+
+    void doMoreStuff()
+    {
+        if (!m_lazyBar)
+            lazyInitialize(m_lazyBar, Bar::create()); // Lazy initialization.
+        // No need to use `Ref { m_bar }` or `protectedBar()` since `m_lazyBar` is `const`.
+        m_lazyBar->doMoreStuff();
+    }
+
+private:
+    const Ref<Bar> m_bar; // Marked as `const` since it never gets reassigned.
+    const RefPtr<Bar> m_lazyBar; // Never reassigned but gets lazy initialized.
+};
+```
+
+**Wrong:**
+```cpp
+class Foo {
+public:
+    Foo()
+        : m_bar(Bar::create())
+    { }
+
+    void doStuff()
+    {
+        // Should use `Ref { m_bar }` or `protectedBar()` if `m_bar` gets reassigned.
+        // Otherwise, mark `m_bar` as `const`.
+        m_bar->doStuff();
+    }
+
+private:
+    Ref<Bar> m_bar;
 };
 ```
 
