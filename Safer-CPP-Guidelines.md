@@ -751,13 +751,13 @@ void Foo::setCookiesFromDOM(const URL& firstParty, const String& cookies)
 
 All IPC endpoints are potential attack vectors. As a result, if certain features are disabled (which is often the case for experimental ones), its related IPC endpoints (or messages) should also be disabled to reduce the surface of attack.
 
-IPC endpoints can be conditionally enabled using `[EnabledBy='FooEnabled']` in the `*.messages.in` file.
+IPC endpoints can be conditionally enabled using `[EnabledBy=FooEnabled]` in the `*.messages.in` file.
 
 **Right:**
 ```cpp
 messages -> GPUConnectionToWebProcess {
-  [EnabledBy='WebGPUEnabled'] void CreateRemoteGPU(WebKit::WebGPUIdentifier identifier)
-  [EnabledBy='WebGPUEnabled'] void ReleaseRemoteGPU(WebKit::WebGPUIdentifier identifier)
+  [EnabledBy=WebGPUEnabled] void CreateRemoteGPU(WebKit::WebGPUIdentifier identifier)
+  [EnabledBy=WebGPUEnabled] void ReleaseRemoteGPU(WebKit::WebGPUIdentifier identifier)
 }
 ```
 
