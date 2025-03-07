@@ -214,6 +214,29 @@ doAsyncWork([this, weakThis = WeakPtr { *this }] {
 });
 ```
 
+### Annotate `NOESCAPE` when a function uses a lambda synchronously
+
+**Reasoning:**
+
+If a function uses a lambda synchronously, and does not store the lambda to the heap to call back later, then lambda captures have the same lifetimes as local variables, and local variable lifetime analysis is sufficient to verify lambda capture lifetime.
+
+**Right:**
+```cpp
+template<typename Function> doSyncWork(NOESCAPE Function) { ... }
+
+// Use `this` synchronously.
+doSyncWork([this] {
+    foo(); // Member function on `this`.
+    bar(); // Member function on `this`.
+});
+```
+
+**Wrong:**
+```cpp
+// Shouldn’t use `NOESCAPE` because `Function` escapes from the local synchronous function context to the heap, to be used later.
+template<typename Function> doAsyncWork(NOESCAPE Function) { ... }
+```
+
 ## Manage resources automatically using resource handles and RAII
 
 **Reasoning:**
