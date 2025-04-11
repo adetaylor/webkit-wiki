@@ -222,7 +222,7 @@ If a function uses a lambda synchronously, and does not store the lambda to the 
 
 **Right:**
 ```cpp
-template<typename Function> doSyncWork(NOESCAPE Function) { ... }
+template<typename Function> doSyncWork(NOESCAPE const Function&) { ... }
 
 // Use `this` synchronously.
 doSyncWork([this] {
@@ -234,7 +234,7 @@ doSyncWork([this] {
 **Wrong:**
 ```cpp
 // Shouldn’t use `NOESCAPE` because `Function` escapes from the local synchronous function context to the heap, to be used later.
-template<typename Function> doAsyncWork(NOESCAPE Function) { ... }
+template<typename Function> doAsyncWork(NOESCAPE Function&&) { ... }
 ```
 
 ## Manage resources automatically using resource handles and RAII
