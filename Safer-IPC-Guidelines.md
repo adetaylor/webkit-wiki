@@ -1,6 +1,6 @@
 # WebKit Guidelines for Safer IPC Programming
 
-See also [guidelines for Safer C++](Safer-CPP-Guidelines.md).
+See also [guidelines for Safer C++](Safer-CPP-Guidelines).
 
 ### Always validate data coming from IPC
 

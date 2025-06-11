@@ -1,6 +1,6 @@
 # WebKit Guidelines for Safer C++ Programming
 
-See also [guidelines for safer IPC programming](Safer-IPC-Guidelines.md).
+See also [guidelines for Safer IPC](Safer-IPC-Guidelines).
 
 ## Use smart pointers for object lifetime management
 
