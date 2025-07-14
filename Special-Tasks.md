@@ -1,2 +1,2 @@
 - [Adding a New WebIDL Interface](https://github.com/WebKit/WebKit/wiki/Adding-a-New-WebIDL-Interface)
-- [Using SPI on Apple platforms](https://github.com/WebKit/WebKit/wiki/Using-SPI-on-Apple-platforms)
+- [Using SPI on Apple platforms](https://github.com/WebKit/WebKit/wiki/Using-SPI-on-Apple-platforms)
