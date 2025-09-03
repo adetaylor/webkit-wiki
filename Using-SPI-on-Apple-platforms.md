@@ -3,6 +3,8 @@ On some Apple ports (e.g. iOS), WebKit tracks its usage of SPI (private API) via
 [1]: https://github.com/WebKit/WebKit/blob/main/Source/WebKit/Configurations/AllowedSPI.toml
 [2]: https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Configurations/AllowedSPI.toml
 
+During the build, `audit-spi` analyzes executables to look for use of symbols or Objective-C selectors that are not known public API. When it detects potential SPI, it emits a diagnostic and a suggested allowlist change. On internal builds, `audit-spi` provides Apple engineers with additional information about how to document new SPI use in internal systems. To continue, update an allowlist and rebuild.
+
 Allowlists are project-specific and stored in each project's `Configurations` directory. WebKitAdditions has its own project-specific allowlists as well.
 
 ## Allowlist format
@@ -26,6 +28,7 @@ requires = [ "..." ]
 
 The `<kind>` is one of the categories of SPI exceptions:
   - **`temporary-usage`**: Used for temporary workarounds or to adopt SPI before a final API form is available.
+  - **`staging`**: Used for temporary adoption of upcoming API. 
   - **`not-web-essential`**: Functionality that another browser vendor would either not use or provide their own implementation.
   - **`equivalent-api`**: SPI that has the same behavior as API except in internal builds or testing workflows.
 
@@ -44,10 +47,10 @@ A class name can be `"?"` to denote an unknown receiver. Because `audit-spi` det
 
 Each allowlist entry is associated with up to two bugs. The meaning of the two bugs depends on the kind of exception:
 
-|Bug type| Meaning for `temporary-usage` exceptions | Meaning for permanent exceptions: `not-web-essential` or `equivalent-api` |
-|-| ------- | -------- |
-|`request`|Tracks a request to make an API equivalent of the SPI being used.|Tracks a request on WebKit to approve this SPI for permanent use, including a justification for why it fits into its exception category.|
-|`cleanup`|Tracks WebKit's adoption of the requested API, once it is available.|N/A|
+|Bug type| on `temporary-usage` | on `staging` | on `not-web-essential` or `equivalent-api` |
+|-|-|-|-|
+|`request`|Tracks a request to make an API equivalent of the SPI being used.|N/A|Tracks a request on WebKit to approve this SPI for permanent use, including a justification for why it fits into its exception category.|
+|`cleanup`|Tracks WebKit's adoption of the requested API, once it is available.|N/A, though once the API is available in SDKs, audit-spi will require the allowlist entry be removed.|N/A|
 
 In some circumstances, temporary exceptions don't have a meaningful request associated with them (for example if SPI is being temporarily adopted to work around an unrelated issue), so the `request` bug is optional.
 
