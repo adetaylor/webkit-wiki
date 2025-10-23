@@ -550,7 +550,7 @@ class Bar : public Foo { };
 void didReceiveData(std::span<const uint8_t>);
 ```
 
-NOTE: You must enable the hardened C++ standard library to take advantage of this protection. In clang/libc++, that means setting `CLANG_CXX_STANDARD_LIBRARY_HARDENING = extensive`.
+NOTE: You must enable the hardened C++ standard library to take advantage of this protection. In clang/libc++, that means setting `_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE`.
 
 **Wrong:**
 ```cpp
@@ -568,7 +568,7 @@ void didReceiveData(const uint8_t* data, size_t size);
 std::array values { 1, 2, 3 };
 ```
 
-NOTE: You must enable the hardened C++ standard library to take advantage of this protection. In clang/libc++, that means setting `CLANG_CXX_STANDARD_LIBRARY_HARDENING = extensive`.
+NOTE: You must enable the hardened C++ standard library to take advantage of this protection. In clang/libc++, that means setting `_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE`.
 
 **Wrong:**
 ```cpp
