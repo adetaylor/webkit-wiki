@@ -1,6 +1,6 @@
 # WebKit Guidelines for Safer C++ Programming
 
-See also [guidelines for Safer IPC](Safer-IPC-Guidelines).
+See also [guidelines for Safer IPC](Safer-IPC-Guidelines) and [guidelines for Safer Swift](Safer-Swift-Guidelines).
 
 ## Use smart pointers for object lifetime management
 
@@ -550,6 +550,8 @@ class Bar : public Foo { };
 void didReceiveData(std::span<const uint8_t>);
 ```
 
+NOTE: You must enable the hardened C++ standard library to take advantage of this protection. In clang/libc++, that means setting `-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE`.
+
 **Wrong:**
 ```cpp
 void didReceiveData(const uint8_t* data, size_t size);
@@ -565,6 +567,8 @@ void didReceiveData(const uint8_t* data, size_t size);
 ```cpp
 std::array values { 1, 2, 3 };
 ```
+
+NOTE: You must enable the hardened C++ standard library to take advantage of this protection. In clang/libc++, that means setting `-D_LIBCPP_HARDENING_MODE=_LIBCPP_HARDENING_MODE_EXTENSIVE`.
 
 **Wrong:**
 ```cpp
