@@ -34,7 +34,7 @@ Reviewers of unsafe code should:
 
 Logic bugs can also sometimes be security bugs. Try to avoid them by using Swift's richer type system to encode invariants in the type system, so that it's impossible to make mistakes at runtime. This also helps minimize use of `unsafe` by reducing the possible runtime states that need to be handled.
 
-At the moment, we don't have enough Swift experience in WebKit to give a firm policy here, but wherever possible please try to use Swift to avoid runtime conditions that can be avoided at compile-time. [Some examples can be found here](Safer-Swift-Rich-Type-System-Examples.md).
+At the moment, we don't have enough Swift experience in WebKit to give a firm policy here, but wherever possible please try to use Swift to avoid runtime conditions that can be avoided at compile-time. [Some examples can be found here](Safer-Swift-Rich-Type-System-Examples).
 
 ## Prefer Swift standard library types over WTF types
 
